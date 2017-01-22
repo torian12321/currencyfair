@@ -1,0 +1,66 @@
+/*
+# Progress Bar
+```
+<div style="background-color: #EEE; padding: 25px;">
+
+	<div class="progressBar" style="margin-bottom: 25px;">
+		<div class="bar" style="width: 30%;"></div>
+	</div>
+
+</div>
+```
+
+# Progress Bar - Colors
+```
+<div style="background-color: #EEE; padding: 25px;">
+	
+	<div class="progressBar" style="margin-bottom: 25px;">
+		<div class="bar" style="width: 80%;"></div>
+	</div>
+
+	<div class="progressBar sec" style="margin-bottom: 25px;">
+		<div class="bar" style="width: 30%;"></div>
+	</div>
+
+	<div class="progressBar success" style="margin-bottom: 25px;">
+		<div class="bar" style="width: 50%;"></div>
+	</div>
+
+</div>
+```
+*/
+
+.progressBar{
+	@height    : 4px;
+
+	position   : relative;
+	width      : 100%;
+	height     : @height;
+	overflow   : hidden; 
+	.rounded(@height);
+	.bar{
+		height     : 100%;
+        .transition(width);
+	}
+
+	// Colors
+	.progressBar_palette();
+    &.sec    { .progressBar_palette(@themeColor_2); }
+	&.success{ .progressBar_palette(@colorState_success); }
+}
+
+
+.progressBar_palette(
+	@color_main: @themeColor_1;
+	@color_sec : fadeOut(@color_main, 70%);
+	){
+
+	background: @color_sec;
+	&.bordered{
+		border-color: @color_main;
+	}
+	.bar{
+		color      : @color_sec;
+		background : @color_main;
+	}
+}

@@ -1,0 +1,130 @@
+//When using themes, some styles will be loaded just once
+@firstLoad  : true;
+@fontAwesome: true;
+
+//-------------------
+//--- Breakpints ----
+//-------------------
+@bp_xs: 767px;
+@bp_sm: 768px;		//@bp_xs + 1px
+@bp_md: 992px;
+@bp_lg: 1200px;
+
+@prefix-xs : xs;
+@prefix-sm : sm;
+@prefix-md : md;
+@prefix-lg : lg;
+
+@grid-columns     : 12;
+@grid-gutter-width: 30px;
+
+//== Container sizes
+//## Define the maximum width of `.container` for different screen sizes.
+@container-sm: (720px  + @grid-gutter-width);
+@container-md: (940px  + @grid-gutter-width);
+@container-lg: (1140px + @grid-gutter-width);
+
+//-------------------
+//--- Directories ---
+//-------------------
+@imgDir   : '../img';
+@iconsDir : '@{imgDir}/icons';
+@defImgDir: '@{imgDir}/default';
+
+@fontDir       : '../fonts';
+@fontAwesomeDir: '@{fontDir}/fontAwesome';
+
+//-------------------
+//----- Colors ------
+//-------------------
+@black    : #32323C;
+@black_2  : #4c4c4c;
+@white    : #FFF;
+@white_2  : #ECEEE3;
+@grey     : #797d86;
+@grey_2   : #595e69;
+@grey_3   : #f1f1f1;
+@red      : #ff0000;
+@yellow   : #FFD079;
+@orange   : #f57c00;
+@turquoise: #00bcd4;
+@pink     : #ff006b;
+@blue     : #2196f3;
+@purple   : #B209A9;
+@green    : #B2E672;
+
+@colorState_info   : #337ab7;
+@colorState_success: #5cb85c;
+@colorState_warning: #f0ad4e;
+@colorState_danger : #d9534f;
+@colorState_disable: #DDD;
+
+
+@fontColor_white: @white;
+@fontColor_grey : #aaa;
+@fontColor_black: @black_2;
+
+
+@themeColor_1 : @blue;
+@themeColor_2 : @yellow;
+@themeColor_BG: @white;
+
+@shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+
+//-------------------
+//-- Font families --
+//-------------------
+@baseFontSize: 16px;
+
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,700,300italic,900);
+.font(){
+	font-family: 'post-grotesk';
+}
+.font-light(){
+	font-weight: 100;
+}
+.font-regular(){
+	font-weight: 300;
+}
+.font-bold(){
+	font-weight: 700;
+}
+.font-black(){
+	font-weight: 900;
+}
+.font-italic(){
+	font-style: italic;
+}
+
+ @font-face {
+    font-family: 'post-grotesk';
+    src: url('@{fontDir}/post-grotesk/PostGrotesk-Light.eot') format('enbedded-opentype'),
+         url('@{fontDir}/post-grotesk/PostGrotesk-Light.ttf') format('truetype'),
+         url('@{fontDir}/post-grotesk/PostGrotesk-Light.woff') format('woff'),
+         url('@{fontDir}/post-grotesk/PostGrotesk-Light.svg') format('svg');
+
+}
+
+// Special
+.font_icons(@Icon: false){
+    font-family: 'FontAwesome';
+
+    // If declared, use an icon
+    & when not (@Icon = false){
+    	content: @Icon;
+    }
+}
+
+//-------------------
+//------- More ------
+//-------------------
+@header_H    : 60px;
+@inputHeight : 32px;
+
+// Borders
+@BRadious: 6px;
+@BStyle  : solid;
+@BWidth  : 2px;
+@BColor  : @themeColor_2;
+@border  : @BStyle @BWidth @BColor;
