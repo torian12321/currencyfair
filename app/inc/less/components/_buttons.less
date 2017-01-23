@@ -40,18 +40,15 @@
 	&:disabled,
 	&.disabled,
   	&[disabled]{
-		background  : @colorState_disable !important;
-		border-color: @colorState_disable !important;
-		color       : @white;
-		box-shadow  : none !important;
-		cursor      : no-drop;
-		.opacity(0.8);
+		box-shadow: none !important;
+		cursor    : no-drop;
+		.opacity(0.6);
 	}
 
 	// Styles
 	&.btn-main   { .btn_palette(); }
 	&.btn-sec    { .btn_palette(@themeColor_2; @white;);}
-	&.btn-white  { .btn_palette(@grey; @black; @white_2); }
+	&.btn-white  { .btn_palette(@white; @fontColor_grey; "white_2"); }
     
     &.btn-info   { .btn_palette(@colorState_info;    @white); }
     &.btn-success{ .btn_palette(@colorState_success; @white); }
@@ -62,9 +59,9 @@
 
 // Mixin for colors
 .btn_palette(
-	@color_border: @themeColor_1;
+	@color_bg    : @themeColor_1;
 	@color_txt   : @white;
-	@color_bg    : lighten(@color_border, 20%);
+	@color_border: darken(@color_bg, 20%);
 ){
 	color     : @color_txt;
 	background: @color_bg;
@@ -73,5 +70,10 @@
 	&:hover,
 	&:focus{
 		background: @color_border;
+	}
+	&:disabled,
+	&.disabled,
+  	&[disabled]{
+		background: @color_bg;
 	}
 }

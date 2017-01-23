@@ -2,7 +2,7 @@ var
 modal = (function(_doc){
     var
     modal    = _doc.querySelector('.modal'),
-    modal_bg = _doc.querySelector('.modal-bg');
+    btnClose = _doc.querySelector('#btnClose');
 
     var
     _open = function(){
@@ -13,8 +13,8 @@ modal = (function(_doc){
         // TODO: clean the form values?
     };
 
-    if (modal_bg){
-        modal_bg.addEventListener('click', _close);
+    if (btnClose){
+        btnClose.addEventListener('click', _close);
     }
 
     return {

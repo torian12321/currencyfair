@@ -23,7 +23,7 @@
 //---------------------
 
 body{
-	color      : @fontColor_black;
+	color      : @fontColor_grey;
 	font-family: post-grotesk;
 	background : @themeColor_BG;
 }
@@ -34,7 +34,7 @@ body{
 	height    : @header_H;
 	img{
 		height: (@header_H * 0.9);
-		margin: (@header_H * 0.05) 0;
+		margin: (@header_H * 0.05) 0 (@header_H * 0.05) 30px;
 	}
 }
 
@@ -63,12 +63,12 @@ body{
 	min-height :  ~"calc(100vh - @{header_H})";
 	background : darken(@themeColor_BG, 5%);
 	border-left: darken(@themeColor_BG, 20%) solid 2px;
-
+	font-size  : 14px;
 	ul{
 		@BG    :  @themeColor_BG;
 		@border: darken(@BG, 15%) 2px solid;
 
-		line-height: 2;
+		line-height: 2.5;
 		background : @BG;
 		border     : @border;
 		overflow   : hidden;
@@ -81,13 +81,27 @@ body{
 			&.title{
 				color      : #000;
 				font-weight: bold;
-				background : darken(@BG, 10%);
+				background : darken(@BG, 5%);
+				.link{
+					font-size: .8em;
+				}
 			}
 			&.footer{
 				text-align: center;
 				color     : @themeColor_2;
 				strong{
 					color: @themeColor_2;
+				}
+			}
+
+			.property{
+
+			}
+			.value{
+				float: right;
+				&.important{
+					font-weight: bold;
+					color      : @fontColor_black;
 				}
 			}
 		}
@@ -101,40 +115,8 @@ body{
 	font-size : 14px;
 	.links{
 		float: right;
+		.link{
+			margin-left: 16px;
+		}
 	}
-}
-
-
-.symbol{
-	@h : 2em;
-
-	position   : relative;
-	font-size  : 20px;
-	height     : @h;
-	line-height: @h;
-	width      : 3.5em;
-	padding    : 0 .5em;
-	text-align : right;
-	font-weight: bold;
-	box-sizing : content-box;
-	background : darken(@themeColor_BG, 5%);
-	border     : darken(@themeColor_BG, 20%) solid 2px;
-	.rounded(@h; @BRadious; @BRadious; @h);
-	&:after{
-		content   : '';
-		position  : absolute;
-		top       : (0.25 * @h);
-		left      : .5em;
-		height    : (0.5 * @h);
-		width     : (0.5 * @h);
-		background: darken(@themeColor_BG, 20%);
-		
-		background-position: center center;
-		background-repeat  : no-repeat;
-		background-size    : cover;
-		.rounded(50%);
-	}
-
-	&.eur:after{ background-image: url('@{iconsDir}/eur.jpg'); }
-	&.gbp:after{ background-image: url('@{iconsDir}/gbp.png'); }
 }

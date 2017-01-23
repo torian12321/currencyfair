@@ -24,13 +24,30 @@
 				<div class="bar" style="width: 33%;"></div>
 			</div>
 		</div>
-		
-		<div class="symbol">EUR</div>
-		<div class="symbol eur">EUR</div>
-		<div class="symbol gbp">EUR</div>
 
+		
 		<h3>Let's set up your transaction!</h3>
 		<span>Specify the amount to be sent or received</span>
+
+		
+		<ul class="transactionDetails">
+			<li class="active">
+				<h2>You send</h2>
+				<div class="ammount">
+					€ 2,000.<span class="cents">00</span>
+				</div>
+				
+				<div class="symbol eur">EUR</div>
+			</li>
+			<li>
+				<h2>Receiver gets</h2>
+				<div class="ammount">
+					£ 1,717.<span class="cents">94</span>
+				</div>
+				<div class="symbol gbp">GBP</div>
+			</li>
+		</ul>
+
 
 		<button id="btnNext" class="btn">Next</button>
 
@@ -43,33 +60,54 @@
 		</div>
 	</div>
 </div>
-<div class="xs-12 md-4 sideBar">
-	<ul>
-		<li class="title">
-			Sending Details
-		</li>
-		<li>
-			abc
-		</li>
-		<li class="title">
-			Receiving Details
-		</li>
-		<li>
-			Rate
-		</li>
-		<li>
-			Fee
-		</li>
-		<li>
-			Deliver
-		</li>
-		<li class="footer">
-			You save <strong>£66.19</strong> compared your bank!
-		</li>
-	</ul>
+
+
+	<div class="xs-12 md-4 sideBar">
+		<ul>
+			<li class="title">
+				Sending Details
+			</li>
+			<li>
+				<div>
+					<span class="property">You send</span>
+					<span class="value important">€2000.00</span>
+				</div>
+			</li>
+			<li class="title">
+				<div>
+					<span class="property">Receiving Details</span>
+					<span class="value">
+						<a href="#" class="link">As of right now <i class="fa fa-question-circle"></i></a>
+					</span>
+				</div>
+			</li>
+			<li>
+				<div>
+					<span class="property">Rate</span>
+					<span class="value">0.86022</span>
+				</div>
+				<div>
+					<span class="property">Fee</span>
+					<span class="value">£2.50</span>
+				</div>
+				<div>
+					<span class="property">Delivery date</span>
+					<span class="value">25th November</span>
+				</div>
+				<div>
+					<span class="property">Recipient gets</span>
+					<span class="value important">£1717.94</span>
+				</div>
+			</li>
+			<li class="footer">
+				You save <strong>£66.19</strong> compared your bank!
+			</li>
+		</ul>
+	</div>
+
+
 </div>
-</div>
 
 
-
+<?php modal(); ?>
 <?php require_once __dir__ . '/_footer.php'; ?>

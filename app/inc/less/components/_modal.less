@@ -15,6 +15,66 @@
 		width     : 100vw;
 		height    : 100vh;
 		background: fadeout(@black, 10%);
-		cursor    : pointer;
+	}
+
+	.modal-body{
+		@BG: @white;
+
+		width     : 90%;
+		min-width : 300px;
+		max-width : 600px;
+		margin    : 100px auto;
+		background: @BG;
+		border    : darken(@BG, 10%);
+		overflow  : hidden;
+		.rounded();
+
+		> div{
+			padding: 24px;
+		}
+		.modal-header{
+			h1{
+				color         : @fontColor_grey;
+				text-transform: none;
+				font-size     : 20px;
+				i{
+					margin-right: 10px;
+				}
+			}
+		}
+		.modal-content{
+			background  : darken(@BG, 5%);
+			border      : darken(@BG, 15%) solid 2px;
+			border-left : none;
+			border-right: none;
+
+			#code{
+				input{
+					font-size  : 24px;
+					min-width  : 2em;
+					width      : 2em;
+					height     : 2em;
+					line-height: 2em;
+					margin     : 0 4px; 
+					text-align : center;
+				}
+			}
+			.option{
+				i{
+					margin-right: 10px;
+					color: @themeColor_1;
+				}
+			}
+		}
+		.modal-footer{
+			button{
+				margin-right: 10px;
+			}
+			.link{
+				margin: 14px 0;
+				float: right;
+			}
+
+		}
 	}
 }

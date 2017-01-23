@@ -1,18 +1,12 @@
-WebTemplate
+CurrencyFair
 =============
 
-Basic web template to start a new page
-
-The templates uses [Progressive Web App](https://developers.google.com/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android) principles
+Example site for [CurrencyFair(https://www.currencyfair.com)
 
 SetingUp
 ---------------
 
 Use a php server to run the project
-
-Change the path of the project on manifest.json
-
-```"start_path" : './'```
 
 
 Install [Nodejs](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) with it in the computer.
@@ -52,9 +46,6 @@ To compile the distribution version of the site, on the root folder run in conso
 
 After this, all the content on 'dist' folder should be ready to directly copy into the server. In that version, php is compiled into .html, and *.js *.css and *.html are minified
 
-**NOTE**
-
-Some times it will be necessary to change manifest.json settings before run the code.
 
 
 Styleguide
@@ -70,10 +61,8 @@ If including styleguide folder, also add the less files 'inc/less/*.less'
 Technologies
 ---------------
 
-- [jQuery](https://jquery.com/)
 - [LESS](http://lesscss.org/)
 - [KaleyStyleguide](https://github.com/thomasdavis/kaleistyleguide)
-- [Waypoint](http://imakewebthings.com/waypoints/)
 - [Gulp](http://gulpjs.com/)
 
 
