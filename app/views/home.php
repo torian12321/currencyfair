@@ -2,8 +2,7 @@
 
 
 
-<div class="container">
-<div class="xs-12 md-8 mainContent">
+<div class="mainContent">
 	
 	<div class="row">
 
@@ -62,7 +61,7 @@
 </div>
 
 
-	<div class="xs-12 md-4 sideBar">
+	<div class="sideBar">
 		<ul>
 			<li class="title">
 				Sending Details
@@ -106,7 +105,6 @@
 	</div>
 
 
-</div>
 
 
 <?php modal(); ?>
