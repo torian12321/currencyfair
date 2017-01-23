@@ -51,7 +51,8 @@ function errorLog(error){
 
 
 // Javascript Tasks
-gulp.task('scripts', ['js_libs', 'js_app']);
+gulp.task('scripts', ['js_app']);
+// gulp.task('scripts', ['js_libs', 'js_app']); 	// No libs used on this proyect
 	gulp.task('js_libs', function () {
 		return gulp.src([
 				paths.app + paths.jsLib + 'jquery-v3.0.0.js',
@@ -66,8 +67,6 @@ gulp.task('scripts', ['js_libs', 'js_app']);
 	gulp.task('js_app', function () {
 		return gulp.src(paths.app + paths.jsApp + '*.js')
 			.pipe(concat('app.js'))
-			// Use 'Mangle: false' just if using angular
-			//.pipe(uglify({mangle: false}))
 			.pipe(uglify())
 			.on('error', errorLog)
 			.pipe(gulp.dest(paths.app + paths.js));
