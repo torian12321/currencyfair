@@ -38,7 +38,7 @@ body{
 	background: @black;
 	img{
 		height: (@header_H * 0.9);
-		margin: (@header_H * 0.05) 0 (@header_H * 0.05) 30px;
+		margin: (@header_H * 0.05) 0;
 	}
 }
 
@@ -112,6 +112,7 @@ body{
 	border-top: darken(@themeColor_BG, 20%) solid 1px;
 	color     : @fontColor_grey;
 	font-size : 14px;
+	clear     : both;
 	.links{
 		float: right;
 		.link{
@@ -119,3 +120,5 @@ body{
 		}
 	}
 }
+.mainContent .contentFooter{ display: none; }
+.sideBar     .contentFooter{ display: block; }

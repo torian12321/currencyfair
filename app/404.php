@@ -1,8 +1,1 @@
-<?php
-/* Redirect browser */
-require_once __dir__ . '/inc/php/init.php';
-sendToHome();
-
-/* Make sure that code below does not get executed when we redirect. */
-exit;
-?>
+<script type="text/javascript">window.location = 'https://torian12321.github.io/currencyfair/dist/';</script>

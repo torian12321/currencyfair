@@ -50,12 +50,7 @@
 
 		<button id="btnNext" class="btn">Next</button>
 
-		<div class="contentFooter">
-			© 2016 CurrencyFair
-			<div class="links">
-				<a href="#" class="link">Help and Support</a>
-				<a href="#" class="link">Legal Stuff</a>
-			</div>
+		<?php contentFooter(); ?>
 		</div>
 	</div>
 </div>
@@ -102,6 +97,8 @@
 				You save <strong>£66.19</strong> compared your bank!
 			</li>
 		</ul>
+
+		<?php contentFooter(); ?>
 	</div>
 
 
