@@ -51,7 +51,7 @@ After this, all the content on 'dist' folder should be ready to directly copy in
 Styleguide
 ---------------
 
-To access the styleguide, open the proyect on the browser and add '/styleguide' to the url
+To access the styleguide, open the proyect on the browser and go to '/app/styleguide'
 
 The Styleguide has been configurated to work with the less files from the proyect
 
