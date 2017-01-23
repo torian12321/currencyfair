@@ -1,7 +1,7 @@
 CurrencyFair
 =============
 
-Example site for [CurrencyFair(https://www.currencyfair.com)
+Example site for [CurrencyFair](https://www.currencyfair.com)
 
 SetingUp
 ---------------
