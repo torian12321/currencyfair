@@ -1,20 +1,16 @@
 import React from 'react';
 import classNames from 'classnames';
-// import { prefixClassName } from 'framework/components/ui/_conf';
+import { Spinner } from 'components';
 // import { Icon, Text } from 'ui';
 import { IButton } from './Button.interfaces';
-// import './Button.styles.scss';
 import styles from './Button.module.scss';
-
-// const clx = prefixClassName('btn');
-const clx = 'btn';
 
 const Button = (props: IButton) => {
   const {
     caption,
     className,
-    color,
     disabled = false,
+    loading = false,
     form,
     onClick,
     outline = false,
@@ -22,21 +18,20 @@ const Button = (props: IButton) => {
     type = 'button'
   } = props;
 
+  const isClickable = !disabled && !loading;
+
   const onClickHandler = () => {
-    onClick();
+    if (isClickable) {
+      onClick();
+    }
   }
 
   return <button
     className={classNames(
       styles.btn,
-      outline && `${clx}--outline`,
-      color && `${clx}--${color}`,
-      caption ? `${clx}--has-caption` : null,
-      // icon && [
-      //   `${clx}--icon`,
-      //   `${clx}--icon--${icon}`,
-      //   `${clx}--icon-position-${iconPosition}`
-      // ],
+      outline && styles.btn__outline,
+      caption && styles.btn__hasCaption,
+      loading && styles.btn__isLoading,
       disabled && styles.btn__disabled,
       className
     )}
@@ -47,6 +42,7 @@ const Button = (props: IButton) => {
     disabled={disabled}
   >
     {caption}
+    {loading && <Spinner className={styles.btn_spinner} />}
   </button>
 }
 

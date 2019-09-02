@@ -6,7 +6,7 @@ export interface IButton {
   alt?: string;
   className?: string;
   disabled?: boolean;
-  color?: 'main' | 'error';
+  loading?: boolean;
   onClick?: any;
   outline?: boolean;
   // icon?: IconNames;

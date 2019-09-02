@@ -1,7 +1,35 @@
-.btn {
-  color: red;
+// Vars
+$btn_mainColor: red;
+$btn_secColor: blue;
+$btn_disabledColor: grey;
 
+// Block
+.btn {
+   box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 0 .8em;
+  min-height: 1.5em;
+  outline: none;
+  text-align: center;
+  background: $btn_mainColor;
+  color: $btn_secColor;
+  border: 1px solid $btn_mainColor;
+  border-radius: 3px;
+
+  cursor: pointer;
+
+  // Elements
+  &_spinner{
+    font-size: .8em;
+  }
+
+  // Modifiers
+  &__outline{}
+  &__hasCaption{}
+  &__isLoading{}
   &__disabled {
-    background: red;
+    background: $btn_disabledColor;
+    border-color: $btn_disabledColor;
   }
 }

@@ -8,8 +8,10 @@ const App: React.FC = () => {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Button caption='ABC' />
-        <Button caption='ABC' disabled />
+        <Button caption='Basic' />
+        <Button caption='Outline' outline />
+        <Button caption='Disabled' disabled />
+        <Button caption='Loading' loading />
         <Spinner />
         <Spinner size='xs' />
         <Spinner size='sm' />
