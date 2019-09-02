@@ -1,1 +1,0 @@
-<script type="text/javascript">window.location = 'https://torian12321.github.io/currencyfair/dist/';</script>
