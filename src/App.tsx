@@ -1,7 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Button } from './components';
+import { Button, Spinner } from 'components';
+
 const App: React.FC = () => {
   return (
     <div className="App">
@@ -9,6 +10,11 @@ const App: React.FC = () => {
         <img src={logo} className="App-logo" alt="logo" />
         <Button caption='ABC' />
         <Button caption='ABC' disabled />
+        <Spinner />
+        <Spinner size='xs' />
+        <Spinner size='sm' />
+        <Spinner size='lg' />
+        <Spinner size='xl' />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>

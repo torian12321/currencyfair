@@ -1,0 +1,52 @@
+// Vars
+$offset: 187;
+$duration: 1.4s;
+
+
+// Block
+.spinner {
+  width: 1em;
+  height: 1em;
+
+// Elements
+svg {
+  width: 100%;
+  height: 100%; 
+  animation: rotator $duration linear infinite;
+  @keyframes rotator {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(270deg); }
+  }
+}
+
+circle {
+  fill: none;
+  stroke-width: 6;
+  stroke-linecap: "round";
+
+  stroke-dasharray: $offset;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  stroke: white;
+  animation: dash $duration ease-in-out infinite;
+
+  @keyframes dash {
+    0% { stroke-dashoffset: $offset; }
+    50% {
+      stroke-dashoffset: $offset/4;
+      transform:rotate(135deg);
+    }
+    100% {
+      stroke-dashoffset: $offset;
+      transform:rotate(450deg);
+    }
+   }
+  }
+
+  // Modifiers
+  &,
+  &__lg { font-size: 24px; } // Default value
+  &__xs { font-size: 8px; }
+  &__sm { font-size: 16px; }  
+  &__xl { font-size: 40px; }
+}
