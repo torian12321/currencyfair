@@ -1,8 +1,8 @@
-import classNames from 'classnames';
 import React from 'react';
+import classNames from 'classnames';
 // import { prefixClassName } from 'framework/components/ui/_conf';
 // import { Icon, Text } from 'ui';
-import { IButton } from './Button.interface';
+import { IButton } from './Button.interfaces';
 // import './Button.styles.scss';
 import styles from './Button.module.scss';
 
