@@ -1,71 +1,44 @@
-CurrencyFair
-=============
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Example site for [CurrencyFair](https://www.currencyfair.com)
+## Available Scripts
 
-SetingUp
----------------
+In the project directory, you can run:
 
-Use a php server to run the project
+### `npm start`
 
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Install [Nodejs](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) with it in the computer.
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
 
-On the project folder, install the node modules running:
+### `npm test`
 
-```npm install```
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `npm run build`
 
-Development phase
----------------
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-All the web content than should be modified is located on **app** folder.
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
 
-Any page (HTML or PHP) should be located on **app** root folder, thel **views** folder is used for templates or components used for php, angular, etc.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `npm run eject`
 
-**Scripts and Style**
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-To compile less and js files **once**, open the console in the project and run:
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-```gulp build```
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-To compile less and js files **each time we save a less file**, open the console in the project and run:
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-```gulp watch ```
+## Learn More
 
-For more information on tasks, open **gulpfile.js**
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-
-Distribution phase (publish)
----------------
-
-To compile the distribution version of the site, on the root folder run in console:
-
-```gulp build-all```
-
-After this, all the content on 'dist' folder should be ready to directly copy into the server. In that version, php is compiled into .html, and *.js *.css and *.html are minified
-
-
-
-Styleguide
----------------
-
-To access the styleguide, open the proyect on the browser and go to '/app/styleguide'
-
-The Styleguide has been configurated to work with the less files from the proyect
-
-If including styleguide folder, also add the less files 'inc/less/*.less'
-
-
-Technologies
----------------
-
-- [LESS](http://lesscss.org/)
-- [KaleyStyleguide](https://github.com/thomasdavis/kaleistyleguide)
-- [Gulp](http://gulpjs.com/)
-
-
-Autor
----------------
-[Aitor](http://aitorpalomares.esy.es/)
+To learn React, check out the [React documentation](https://reactjs.org/).
