@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState /*, useEffect*/ } from "react";
+import { useEventListener } from "./useEventListener";
 
 const _w = window;
 const getPosition = () => ({
@@ -9,17 +10,11 @@ const getPosition = () => ({
 const useWindowScrollPosition = () => {
   const [position, setPosition] = useState(getPosition());
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setPosition(getPosition());
-    };
+  const handleScroll = () => {
+    setPosition(getPosition());
+  };
 
-    _w.addEventListener("scroll", handleScroll);
-
-    return () => {
-      _w.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  useEventListener("scroll", handleScroll, window);
 
   return {
     position,
