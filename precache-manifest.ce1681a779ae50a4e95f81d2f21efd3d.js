@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e399bea9a91f3ce59c343342db4f0195",
+    "revision": "dbe7e202e0fb576e45b2675a2457d7c7",
     "url": "/currencyfair/index.html"
   },
   {
-    "revision": "2bab11de3d931f621b8e",
-    "url": "/currencyfair/static/css/main.0ddecfe7.chunk.css"
+    "revision": "89faf05c6fda23567ae9",
+    "url": "/currencyfair/static/css/main.2e6a46ec.chunk.css"
   },
   {
-    "revision": "ad633593704dd414459b",
-    "url": "/currencyfair/static/js/2.13c4197a.chunk.js"
+    "revision": "0fe269b441a875b53e5c",
+    "url": "/currencyfair/static/js/2.d825da98.chunk.js"
   },
   {
-    "revision": "2bab11de3d931f621b8e",
-    "url": "/currencyfair/static/js/main.4381af87.chunk.js"
+    "revision": "89faf05c6fda23567ae9",
+    "url": "/currencyfair/static/js/main.09308664.chunk.js"
   },
   {
     "revision": "e5e1729f938d8928a208",

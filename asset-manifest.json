@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/currencyfair/static/css/main.0ddecfe7.chunk.css",
-    "main.js": "/currencyfair/static/js/main.4381af87.chunk.js",
-    "main.js.map": "/currencyfair/static/js/main.4381af87.chunk.js.map",
+    "main.css": "/currencyfair/static/css/main.2e6a46ec.chunk.css",
+    "main.js": "/currencyfair/static/js/main.09308664.chunk.js",
+    "main.js.map": "/currencyfair/static/js/main.09308664.chunk.js.map",
     "runtime~main.js": "/currencyfair/static/js/runtime~main.0dfe709a.js",
     "runtime~main.js.map": "/currencyfair/static/js/runtime~main.0dfe709a.js.map",
-    "static/js/2.13c4197a.chunk.js": "/currencyfair/static/js/2.13c4197a.chunk.js",
-    "static/js/2.13c4197a.chunk.js.map": "/currencyfair/static/js/2.13c4197a.chunk.js.map",
+    "static/js/2.d825da98.chunk.js": "/currencyfair/static/js/2.d825da98.chunk.js",
+    "static/js/2.d825da98.chunk.js.map": "/currencyfair/static/js/2.d825da98.chunk.js.map",
     "index.html": "/currencyfair/index.html",
-    "precache-manifest.a783eacbe33957ca073f6612952e6444.js": "/currencyfair/precache-manifest.a783eacbe33957ca073f6612952e6444.js",
+    "precache-manifest.ce1681a779ae50a4e95f81d2f21efd3d.js": "/currencyfair/precache-manifest.ce1681a779ae50a4e95f81d2f21efd3d.js",
     "service-worker.js": "/currencyfair/service-worker.js",
-    "static/css/main.0ddecfe7.chunk.css.map": "/currencyfair/static/css/main.0ddecfe7.chunk.css.map",
+    "static/css/main.2e6a46ec.chunk.css.map": "/currencyfair/static/css/main.2e6a46ec.chunk.css.map",
     "static/media/logo.svg": "/currencyfair/static/media/logo.5d5d9eef.svg"
   }
 }
