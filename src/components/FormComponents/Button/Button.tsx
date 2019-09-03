@@ -1,8 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { Spinner } from 'components';
-// import { Icon, Text } from 'ui';
-import { IButton } from './Button.interfaces';
+import { IButton, IButtonList } from './Button.interfaces';
 import styles from './Button.module.scss';
 
 const Button = (props: IButton) => {
@@ -45,5 +44,13 @@ const Button = (props: IButton) => {
     {loading && <Spinner className={styles.btn_spinner} />}
   </button>
 }
+
+const ButtonList = ({ children, className }: IButtonList) => (
+  <div className={classNames(styles.btnList, className)} >
+    {children}
+  </div>
+);
+
+Button.List = ButtonList;
 
 export { Button }

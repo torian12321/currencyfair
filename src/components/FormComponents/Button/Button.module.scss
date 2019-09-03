@@ -1,35 +1,88 @@
+$white: #fff;
+$whiteDark: #94aaba;
+$blue: #6ec0e6;
+$blue_dark: #2b4d5c;
+$blue_darker: #213945;
+
+$themeColor_1: $blue;
+
+$borderRadius: 4px;
+
+$borderWidth: 1px;
+$borderStyle: solid;
+$borderColor: $themeColor_1;
+$border: $borderWidth $borderStyle $borderColor;
+
 // Vars
-$btn_mainColor: red;
-$btn_secColor: blue;
+$btn_mainColor: $themeColor_1;
+$btn_secColor: $white;
 $btn_disabledColor: grey;
 
 // Block
 .btn {
-   box-sizing: border-box;
+  
+  box-sizing: border-box;
   font-size: 16px;
-  line-height: 1.5;
-  padding: 0 .8em;
-  min-height: 1.5em;
+  line-height: 2.5;
+  min-height: 2.5em;
+  padding: 0 1.2em;
   outline: none;
   text-align: center;
   background: $btn_mainColor;
   color: $btn_secColor;
-  border: 1px solid $btn_mainColor;
-  border-radius: 3px;
-
+  border: $borderWidth $borderStyle $btn_mainColor;
+  border-radius: $borderRadius;
   cursor: pointer;
+
+  &:active,
+  &:hover,
+  &:focus {
+    background: lighten($btn_mainColor, 5)
+  }
 
   // Elements
   &_spinner{
     font-size: .8em;
+    display: inline-block;
+    margin-left: 1em;
   }
 
   // Modifiers
-  &__outline{}
+  &__outline{
+    background: $btn_secColor;
+    color: $btn_mainColor;
+
+    &:active,
+    &:hover,
+    &:focus {
+      background: darken($btn_secColor, 5)
+    }
+  }
   &__hasCaption{}
   &__isLoading{}
+
+  &:disabled,
   &__disabled {
-    background: $btn_disabledColor;
-    border-color: $btn_disabledColor;
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      background: $btn_disabledColor;
+      border-color: $btn_disabledColor;
+    }
+  }
+}
+
+.btnList {
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+
+  .btn {
+    display: inline;
+    margin-right: 16px;
+    &:last-child{
+      margin-right: 0;
+    }
   }
 }

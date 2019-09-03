@@ -1,6 +1,5 @@
-// import { IconNames, IconSizes } from 'framework/components/ui/Icon';
-
 export interface IButton {
+  children?: never;
   name?: string;
   caption?: string;
   alt?: string;
@@ -9,8 +8,11 @@ export interface IButton {
   loading?: boolean;
   onClick?: any;
   outline?: boolean;
-  // icon?: IconNames;
-  // iconSize?: IconSizes;
   type?: 'reset' | 'submit' | 'button';
   form?: string;
+}
+
+export interface IButtonList {
+  children: any;
+  className?: string;
 }
