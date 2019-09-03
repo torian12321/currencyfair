@@ -2,16 +2,13 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { Header } from "./Header";
-import { Button, Spinner } from "components/ui";
-import { useWindowScrollPosition } from "components/hooks";
+import { Button, Spinner, Modal } from "components/ui";
 
 const App: React.FC = () => {
-  const { position } = useWindowScrollPosition();
-
-  console.log("Position", position);
   return (
     <div className="App">
       <Header />
+      <Modal />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Button.Group>
