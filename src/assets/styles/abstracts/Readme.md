@@ -1,0 +1,9 @@
+This folder gathers all Sass tools and helpers used across the project.
+Every global variable, function, mixin and placeholder should be put in here.
+
+The rule of thumb for this folder is that it should not output a single line of
+CSS when compiled on its own. These are nothing but Sass helpers.
+
+https://sass-guidelin.es/#abstracts-folder
+
+All variables should end on '... !default' for been able to be overridden

@@ -1,0 +1,133 @@
+/**
+* TOC
+*
+* 1. Colors
+* 2. Breakpoints
+* 3. Borders
+* 4. Fonts
+* 5. Others
+* 6. Typography
+*/
+
+/***********************/
+/* ---- 1. Colors ---- */
+/***********************/
+
+// Primary
+$main-color-dark: #1565c0 !default;
+$main-color-darker: #0d47a1 !default;
+$main-color-light: #d2e3ff !default;
+$main-color-lighter: #dbe4f1 !default;
+$main-color-lightest: #eff5fb !default;
+$main-color-darkest: #0a3e67 !default;
+$main-color: #2962ff !default;
+$progress: #7bf264 !default;
+
+// Background
+$background-1: #f6f7f9 !default;
+$background-2: #fafbfc !default;
+$background-3: #e7eaef !default;
+$background-4: #f9fafc !default;
+$grey-darker: #384049 !default;
+$grey: #c8d4dd !default;
+$modal-overlay: rgba(#1a3851, 0.8) !default;
+$warning: #ffeb3b !default;
+$white: #ffffff !default;
+$black: #000 !default;
+$inactive: #5c6b7a !default;
+$unscheduled: #0a62c2 !default;
+$success: #ccfef3 !default;
+$success-dark: #a9f4e4 !default;
+$info: $success;
+$info-dark: $success-dark;
+$active: #0c7d6c !default;
+$active-dark: #005b4f !default;
+$picking: #ff7429 !default;
+$picking-dark: #ff5900 !default;
+$draft: #eb004e !default;
+$draft-dark: #c70042 !default;
+$processing: #4fc3f7 !default;
+$processing-dark: #039be5 !default;
+$placed: #4dd0e1 !default;
+$placed-dark: #00acc1 !default;
+$substituted: #ab41be !default;
+$substituted-dark: #790e8b !default;
+$partially: #afb42b !default;
+$partially-dark: #999900 !default;
+$error: #c7180b !default;
+$error-dark: #ab000d !default;
+$error-light: #fcd9d7 !default;
+$notification: #c54400 !default;
+$notification-light: #fff2de !default;
+
+// NEWS
+$whiteDark: #94aaba;
+$blue: #6ec0e6;
+$blue_dark: #2b4d5c;
+$blue_darker: #213945;
+
+$themeColor_1: $blue;
+
+// Text
+$main-text-color: #0245ff !default;
+$text-primary: #222b35 !default;
+$text-secondary: #5c6b7a !default;
+$text-success-messaging: #0c7d6c !default;
+$late-text: #222222 !default;
+$info-text: #0e8d7b !default;
+
+/* ********************* */
+/* -- 2. Breakpoints --- */
+/* ********************* */
+$bp_xs: 767px !default;
+$bp_sm: $bp_xs + 1 !default;
+$bp_md: 992px !default;
+$bp_lg: 1200px !default;
+$prefix-xs: xs;
+$prefix-sm: sm;
+$prefix-md: md;
+$prefix-lg: lg;
+
+/* ******************** */
+/* ---- 3. Borders ---- */
+/* ******************** */
+$border-radius: 4px !default;
+$border-width: 1px;
+$border-style: solid;
+$border-color: $themeColor_1;
+$border: $border-style $border-width $border-color !default;
+
+/* ********************* */
+/* ------ 4. Fonts ----- */
+/* ********************* */
+$font-size-small: 0.75rem !default; // 12px
+$font-size: 0.875rem !default; // 14px
+$font-size-large: 16px !default; // 1rem
+$font-size-heading: 1.25rem !default; // 20px
+$font-size-page-header: 2rem !default; // 32px
+$font-weight: 400 !default;
+$font-weight-regular: $font-weight !default;
+$font-weight-semi-bold: 500 !default;
+$font-weight-bold: 700 !default;
+$font-weight-light: 300 !default;
+
+/* ********************* */
+/* ----- 5. Others ----- */
+/* ********************* */
+$content-gutter-x: 32px;
+$content-gutter-y: 32px;
+$panel-gutter-x: 20px;
+$panel-gutter-y: 16px;
+$transition-time: 0.3s;
+$transition-timing: ease-out;
+
+/* ********************* */
+/* --- 6. Typography --- */
+/* ********************* */
+$font-main: "Roboto-Regular", sans-serif;
+$font-italic: "Roboto-Italic", sans-serif;
+$font-light: "Roboto-Light", sans-serif;
+$font-light-italic: "Roboto-LightItalic", sans-serif;
+$font-bold: "Roboto-Bold", sans-serif;
+$font-bold-italic: "Roboto-BoldItalic", sans-serif;
+$font-body-large: normal font-size $font-main;

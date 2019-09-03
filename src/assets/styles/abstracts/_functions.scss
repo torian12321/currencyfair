@@ -1,0 +1,12 @@
+@function smartColor(
+  $color: $background-1,
+  $colorLight: $white,
+  $colorDark: $text-primary,
+  $reference: 50
+) {
+  @if (lightness($color) > $reference) {
+    @return $colorDark;
+  } @else {
+    @return $colorLight;
+  }
+}

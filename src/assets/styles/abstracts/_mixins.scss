@@ -1,0 +1,198 @@
+/*
+* TOC
+*
+* 1. Fonts
+* 2. BreackPoints
+* 3. Placeholders
+* 4. SmartColors
+* 5. Transitions
+* 6. Hidden
+* 7. Background
+* 8. Transforms
+* 9. Others
+*/
+
+/***********************/
+/* ---- 1. Fonts ----- */
+/***********************/
+@mixin font() {
+  font-family: $font-main;
+}
+@mixin font-regular() {
+  font-family: $font-main;
+}
+
+/***********************/
+/* - 2. BreakPoints -- */
+/***********************/
+// Usage:
+//
+// .sidebar {
+//   width: 50%;
+//   float: left;
+//
+//   @include bp-sm {
+//     width: 100%;
+//     float: none;
+//   }
+// }
+
+@mixin bp-xs {
+  @media (max-width: $bp_xs) {
+    @content;
+  }
+}
+@mixin bp-sm {
+  @media (min-width: $bp_sm) {
+    @content;
+  }
+}
+@mixin bp-md {
+  @media (min-width: $bp_md) {
+    @content;
+  }
+}
+@mixin bp-lg {
+  @media (min-width: $bp_lg) {
+    @content;
+  }
+}
+
+/***********************/
+/* - 3. Placeholders - */
+/***********************/
+// Usage:
+//
+// input,
+// textarea {
+//   @include input-placeholder {
+//     color: grey;
+//   }
+// }
+
+@mixin input-placeholder {
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+/***********************/
+/* - 4. SmartColors -- */
+/***********************/
+
+@mixin smart-text-color(
+  $BG: $background-1,
+  $colorLight: $white,
+  $colorDark: $text-primary,
+  $reference: 60
+) {
+  color: smartColor($BG, $colorLight, $colorDark, $reference);
+}
+@mixin smart-bg-color(
+  $BG: $background-1,
+  $colorLight: $white,
+  $colorDark: $black_dark,
+  $reference: 60
+) {
+  background: smartColor($BG, $colorLight, $colorDark, $reference);
+}
+@mixin smart-fill-color(
+  $BG: $background-1,
+  $colorLight: $white,
+  $colorDark: $black_dark,
+  $reference: 60
+) {
+  fill: smartColor($BG, $colorLight, $colorDark, $reference);
+}
+
+/* ********************* */
+/* -- 5. Transitions --- */
+/* ********************* */
+@mixin transition(
+  $property: all,
+  $time: $transition-time,
+  $timing: $transition-timing,
+  $delay: false,
+  $merge: true
+) {
+  @if ($delay != false) {
+    -webkit-transition-delay: $delay;
+    transition-delay: $delay;
+  }
+  will-change: $property;
+  -webkit-transition: $property $timing $time;
+  transition: $property $timing $time;
+}
+
+/* ******************* */
+/* ---- 6. Hidden ---- */
+/* ******************* */
+// When you hide an element with display: none, that prevents screen readers from reading it to the user.
+// Sometimes that’s fine, but in other cases this will make the site hard to use for people with screen
+// readers. Thus, we have to use another technique for hiding elements while at the same time make them
+// accessible.
+%visuallyhidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+@mixin visually-hidden {
+  @extend %visuallyhidden;
+}
+
+/* ********************* */
+/* --- 7. Background --- */
+/* ********************* */
+@mixin background-img(
+  $BG-url,
+  $position: center center,
+  $size: cover,
+  $repeat: no-repeat
+) {
+  background: url($BG-url) $repeat $position;
+  background-size: $size;
+}
+@mixin background-parallax($BG-url, $position: center center) {
+  background: url($BG-url) $position no-repeat fixed;
+  @include background-cover();
+}
+@mixin background-cover($position: center center, $repeat: no-repeat) {
+  background-position: $position;
+  background-repeat: $repeat;
+  background-size: cover;
+}
+
+/* ******************* */
+/* -- 8. Transforms -- */
+/* ******************* */
+@mixin rotate($angle: 180deg, $x-axis: 50%, $y-axis: 50%) {
+  @include transform(rotate($angle));
+  @include transform-origin($x-axis $y-axis);
+}
+@mixin scale($value: 1, $x-axis: 50%, $y-axis: 50%) {
+  @include transform(scale($value));
+  @include transform-origin($x-axis $y-axis);
+}
+
+/* ******************* */
+/* ---- 9. Others ---- */
+/* ******************* */
+@mixin oneLineText() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
