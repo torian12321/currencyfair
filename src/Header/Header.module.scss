@@ -1,0 +1,27 @@
+@import "../assets/styles/abstracts/index.scss";
+
+$blue_darker: #213945;
+
+$header_bg: $blue_darker;
+
+// Block
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 30px;
+  background-color: $header_bg;
+  min-height: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  color: white;
+
+  @include transition($property: all, $time: 1s, $delay: 5);
+
+  &__small {
+    background: red;
+    font-size: 10px;
+  }
+}

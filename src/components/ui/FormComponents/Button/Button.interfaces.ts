@@ -8,11 +8,11 @@ export interface IButton {
   loading?: boolean;
   onClick?: any;
   outline?: boolean;
-  type?: 'reset' | 'submit' | 'button';
+  type?: "reset" | "submit" | "button";
   form?: string;
 }
 
-export interface IButtonList {
-  children: any;
+export interface IButtonGroup {
+  children: JSX.Element[] | JSX.Element;
   className?: string;
 }

@@ -1,17 +1,4 @@
-$white: #fff;
-$whiteDark: #94aaba;
-$blue: #6ec0e6;
-$blue_dark: #2b4d5c;
-$blue_darker: #213945;
-
-$themeColor_1: $blue;
-
-$borderRadius: 4px;
-
-$borderWidth: 1px;
-$borderStyle: solid;
-$borderColor: $themeColor_1;
-$border: $borderWidth $borderStyle $borderColor;
+@import "../../../../assets/styles/abstracts/index.scss";
 
 // Vars
 $btn_mainColor: $themeColor_1;
@@ -20,7 +7,6 @@ $btn_disabledColor: grey;
 
 // Block
 .btn {
-  
   box-sizing: border-box;
   font-size: 16px;
   line-height: 2.5;
@@ -30,36 +16,39 @@ $btn_disabledColor: grey;
   text-align: center;
   background: $btn_mainColor;
   color: $btn_secColor;
-  border: $borderWidth $borderStyle $btn_mainColor;
-  border-radius: $borderRadius;
+  border: $border-style $border-width $btn_mainColor;
+  border-radius: $border-radius;
   cursor: pointer;
+  @include transition(background);
 
   &:active,
   &:hover,
   &:focus {
-    background: lighten($btn_mainColor, 5)
+    background: lighten($btn_mainColor, 5);
   }
 
   // Elements
-  &_spinner{
-    font-size: .8em;
+  &_spinner {
+    font-size: 0.8em;
     display: inline-block;
     margin-left: 1em;
   }
 
   // Modifiers
-  &__outline{
+  &__outline {
     background: $btn_secColor;
     color: $btn_mainColor;
 
     &:active,
     &:hover,
     &:focus {
-      background: darken($btn_secColor, 5)
+      background: darken($btn_secColor, 5);
     }
   }
-  &__hasCaption{}
-  &__isLoading{}
+  &__hasCaption {
+  }
+  &__isLoading {
+  }
 
   &:disabled,
   &__disabled {
@@ -81,7 +70,7 @@ $btn_disabledColor: grey;
   .btn {
     display: inline;
     margin-right: 16px;
-    &:last-child{
+    &:last-child {
       margin-right: 0;
     }
   }
