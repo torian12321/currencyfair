@@ -1,29 +1,30 @@
 import { useState, useEffect } from "react";
 
-const useWindowScrollPosition = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+const _w = window;
+const getPosition = () => ({
+  x: _w.pageXOffset,
+  y: _w.pageYOffset
+});
 
-  const getPosition = () => ({
-    x: window.pageXOffset,
-    y: window.pageYOffset
-  });
+const useWindowScrollPosition = () => {
+  const [position, setPosition] = useState(getPosition());
 
   useEffect(() => {
     const handleScroll = () => {
       setPosition(getPosition());
     };
 
-    window.addEventListener("scroll", handleScroll);
+    _w.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      _w.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return {
     position,
-    positionX: position.x || 0,
-    positionY: position.y || 0
+    positionX: position.x,
+    positionY: position.y
   };
 };
 
