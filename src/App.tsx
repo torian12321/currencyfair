@@ -10,7 +10,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <Header />
-      <Modal />
+      <Modal>I have some custom content</Modal>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Button.Group>
