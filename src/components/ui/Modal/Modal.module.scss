@@ -1,0 +1,51 @@
+@import "assets/styles/abstracts/index.scss";
+
+.body_hasModal {
+  overflow: hidden;
+}
+.modal {
+  &_BG {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    opacity: 0;
+
+    animation: fadeI_BG 0.5s ease-in 1;
+    animation-fill-mode: forwards;
+    @keyframes fadeI_BG {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 0.4;
+      }
+    }
+  }
+
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  max-width: 800px;
+  min-width: 200px;
+  opacity: 0;
+  background: $white;
+
+  animation: fadeIn 0.5s ease-in 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0.3s;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      margin-top: 16px;
+    }
+    to {
+      opacity: 1;
+      margin-top: 0;
+    }
+  }
+}
