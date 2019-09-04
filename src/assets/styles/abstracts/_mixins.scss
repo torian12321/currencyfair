@@ -124,13 +124,13 @@
   $delay: false,
   $merge: true
 ) {
+  will-change: $property;
+  -webkit-transition: $property $timing $time;
+  transition: $property $timing $time;
   @if ($delay != false) {
     -webkit-transition-delay: $delay;
     transition-delay: $delay;
   }
-  will-change: $property;
-  -webkit-transition: $property $timing $time;
-  transition: $property $timing $time;
 }
 
 /* ******************* */
