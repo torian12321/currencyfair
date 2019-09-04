@@ -27,11 +27,13 @@ const App: React.FC = () => {
           <Button caption="Loading" loading />
 
           <Panel>
-            <Panel.Section>bla bla</Panel.Section>
-            <Panel.Section>bla bla</Panel.Section>
-            <Panel.Section>bla bla</Panel.Section>
-            <Panel.Section>bla bla</Panel.Section>
-            <Panel.Section>bla bla</Panel.Section>
+            <Panel.Section>Sending Details</Panel.Section>
+            <Panel.Section>You send....</Panel.Section>
+            <Panel.Section>Receiving Details</Panel.Section>
+            <Panel.Section>Rate...</Panel.Section>
+            <Panel.Section>
+              You save £66.19 compared to your bank!
+            </Panel.Section>
           </Panel>
           <p>
             Edit <code>src/App.tsx</code> and save to reload.
