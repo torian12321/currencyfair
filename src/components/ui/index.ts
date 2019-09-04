@@ -1,6 +1,5 @@
-export { Modal } from "./Modal";
+export { Modal, useModal } from "./Modal";
 export { Spinner } from "./Spinner";
 
 // Form
 export * from "./FormComponents";
-// export { Button } from "../FormComponents";

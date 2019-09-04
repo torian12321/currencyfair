@@ -2,9 +2,11 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { Header } from "./Header";
-import { Button, Spinner, Modal } from "components/ui";
+import { Button, Spinner, useModal } from "components/ui";
 
 const App: React.FC = () => {
+  const { Modal, showModal } = useModal();
+
   return (
     <div className="App">
       <Header />
@@ -12,7 +14,7 @@ const App: React.FC = () => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Button.Group>
-          <Button caption="Basic" />
+          <Button caption="Basic" onClick={showModal} />
           <Button caption="Outline" outline />
         </Button.Group>
 
