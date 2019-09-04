@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import { useKeyPress } from "components/hooks";
+import { IModal } from "./Modal.interfaces";
 import styles from "./Modal.module.scss";
 
 const KEY_ESC = 27;
 
-const Modal = (props: any) => {
-  const { onDismiss = () => {} } = props;
+const Modal = (props: IModal) => {
+  const { children, onDismiss = () => {} } = props;
   const escIsPressed = useKeyPress(KEY_ESC);
 
   useEffect(() => {
@@ -32,6 +33,7 @@ const Modal = (props: any) => {
       <div className={styles.modal_BG} />
       <div className={styles.modal}>
         <div onClick={closeModal}>close me</div>
+        {children}
       </div>
     </>,
     document.body

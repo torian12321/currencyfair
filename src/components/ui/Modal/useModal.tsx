@@ -1,5 +1,11 @@
 import React, { useState } from "react";
 import { Modal } from "./Modal";
+import { IModal } from "./Modal.interfaces";
+
+/**
+ * Hook returning <Modal /> component and its controllers
+ *
+ */
 
 const useModal = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -7,7 +13,8 @@ const useModal = () => {
   const showModal = () => setIsVisible(true);
 
   return {
-    Modal: () => (isVisible ? <Modal onDismiss={hiddeModal} /> : null),
+    Modal: (props: IModal) =>
+      isVisible ? <Modal onDismiss={hiddeModal} {...props} /> : null,
     showModal,
     hiddeModal
   };
