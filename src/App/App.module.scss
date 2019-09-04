@@ -1,0 +1,37 @@
+@import "assets/styles/abstracts/index.scss";
+
+.App {
+  display: grid;
+  grid-gap: 0;
+  min-height: 100vh;
+
+  grid-template-areas:
+    "header"
+    "aside"
+    "section";
+
+  @include bp-md {
+    grid-template-areas:
+      "header header"
+      "section aside";
+    grid-template-columns: 1fr 18%;
+    grid-gap: 0;
+    min-height: 100vh;
+  }
+}
+
+.header {
+  grid-area: header;
+  position: sticky;
+}
+.main {
+  background: $background-1;
+  grid-area: section;
+}
+.aside {
+  grid-area: aside;
+  background: $background-2;
+  @include bp-md {
+    border-left: 2px solid black;
+  }
+}

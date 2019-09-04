@@ -6,7 +6,8 @@ $header_bg: $blue_darker;
 
 // Block
 .header {
-  position: fixed;
+  // position: fixed;
+  z-index: 200;
   top: 0;
   left: 0;
   right: 0;
@@ -15,6 +16,7 @@ $header_bg: $blue_darker;
   // Elements
   &_content {
     width: 100%;
+    box-sizing: border-box;
     max-width: $bp_lg;
     padding: 0 $content-gutter-x;
     margin: auto;
