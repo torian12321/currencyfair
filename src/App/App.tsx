@@ -1,6 +1,6 @@
 import React from "react";
 import { Header } from "./Header";
-import { Button, Spinner, useModal } from "components/ui";
+import { Button, Spinner, useModal, Panel, Link } from "components/ui";
 
 const App: React.FC = () => {
   const { Modal, showModal } = useModal();
@@ -26,17 +26,17 @@ const App: React.FC = () => {
           <Button caption="Disabled" disabled />
           <Button caption="Loading" loading />
 
+          <Panel>
+            <Panel.Section>bla bla</Panel.Section>
+            <Panel.Section>bla bla</Panel.Section>
+            <Panel.Section>bla bla</Panel.Section>
+            <Panel.Section>bla bla</Panel.Section>
+            <Panel.Section>bla bla</Panel.Section>
+          </Panel>
           <p>
             Edit <code>src/App.tsx</code> and save to reload.
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <Link caption="Go somewhere" href="bla bla" />
         </div>
       </div>
     </>
