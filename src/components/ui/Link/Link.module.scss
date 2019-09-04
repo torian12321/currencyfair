@@ -1,6 +1,17 @@
 @import "assets/styles/abstracts/index.scss";
 
+$link_mainColor: $themeColor_1;
+$link_secColor: darken($themeColor_1, 20);
+
 .link {
   text-decoration: none;
-  color: blue;
+  color: $link_mainColor;
+  cursor: pointer;
+  @include transition(color);
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $link_secColor;
+  }
 }
