@@ -1,4 +1,4 @@
-@import "../../../assets/styles/abstracts/index.scss";
+@import "assets/styles/abstracts/index.scss";
 
 // Vars
 $offset: 187;
@@ -13,8 +13,8 @@ $duration: 1.4s;
   svg {
     width: 100%;
     height: 100%;
-    animation: rotator $duration linear infinite;
-    @keyframes rotator {
+    animation: rotate $duration linear infinite;
+    @keyframes rotate {
       0% {
         transform: rotate(0deg);
       }
@@ -32,7 +32,7 @@ $duration: 1.4s;
     stroke-dasharray: $offset;
     stroke-dashoffset: 0;
     transform-origin: center;
-    stroke: white;
+    stroke: $white;
     animation: dash $duration ease-in-out infinite;
 
     @keyframes dash {
