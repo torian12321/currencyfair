@@ -16,6 +16,7 @@ $panel_gutter_y: 14px;
     text-align: left;
     background: $panel_mainColor;
     border: $border;
+    border-bottom-width: 0;
     padding: $panel_gutter_y $panel_gutter_x;
 
     &:nth-child(even) {
@@ -26,6 +27,7 @@ $panel_gutter_y: 14px;
     }
     &:last-child {
       border-radius: 0 0 $border-radius $border-radius;
+      border-bottom-width: $border-width;
     }
   }
 }
