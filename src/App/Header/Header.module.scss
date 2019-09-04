@@ -1,0 +1,32 @@
+@import "assets/styles/abstracts/index.scss";
+
+$blue_darker: #213945;
+
+$header_bg: $blue_darker;
+
+// Block
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $header_bg;
+
+  // Elements
+  &_content {
+    width: 100%;
+    max-width: $bp_lg;
+    padding: 0 $content-gutter-x;
+    margin: auto;
+    text-align: left;
+  }
+  &_logo {
+    height: 80px;
+    @include transition($property: height, $time: 1s, $delay: 0.4s);
+  }
+
+  // Modifiers
+  &__small &_logo {
+    height: 48px;
+  }
+}

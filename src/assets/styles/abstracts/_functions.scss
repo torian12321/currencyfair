@@ -1,10 +1,10 @@
 @function smartColor(
-  $color: $background-1,
+  $colorBG: $background-1,
   $colorLight: $white,
-  $colorDark: $text-primary,
+  $colorDark: $black,
   $reference: 50
 ) {
-  @if (lightness($color) > $reference) {
+  @if (lightness($colorBG) > $reference) {
     @return $colorDark;
   } @else {
     @return $colorLight;

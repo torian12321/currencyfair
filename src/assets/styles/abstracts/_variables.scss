@@ -30,35 +30,9 @@ $background-3: #e7eaef !default;
 $background-4: #f9fafc !default;
 $grey-darker: #384049 !default;
 $grey: #c8d4dd !default;
-$modal-overlay: rgba(#1a3851, 0.8) !default;
 $warning: #ffeb3b !default;
 $white: #ffffff !default;
 $black: #000 !default;
-$inactive: #5c6b7a !default;
-$unscheduled: #0a62c2 !default;
-$success: #ccfef3 !default;
-$success-dark: #a9f4e4 !default;
-$info: $success;
-$info-dark: $success-dark;
-$active: #0c7d6c !default;
-$active-dark: #005b4f !default;
-$picking: #ff7429 !default;
-$picking-dark: #ff5900 !default;
-$draft: #eb004e !default;
-$draft-dark: #c70042 !default;
-$processing: #4fc3f7 !default;
-$processing-dark: #039be5 !default;
-$placed: #4dd0e1 !default;
-$placed-dark: #00acc1 !default;
-$substituted: #ab41be !default;
-$substituted-dark: #790e8b !default;
-$partially: #afb42b !default;
-$partially-dark: #999900 !default;
-$error: #c7180b !default;
-$error-dark: #ab000d !default;
-$error-light: #fcd9d7 !default;
-$notification: #c54400 !default;
-$notification-light: #fff2de !default;
 
 // NEWS
 $whiteDark: #94aaba;
@@ -69,12 +43,11 @@ $blue_darker: #213945;
 $themeColor_1: $blue;
 
 // Text
-$main-text-color: #0245ff !default;
-$text-primary: #222b35 !default;
-$text-secondary: #5c6b7a !default;
+$text-color: #222b35 !default;
+$text-color-dark: $text-color !default;
+$text-color-light: $white !default;
+$text-color-secondary: #5c6b7a !default;
 $text-success-messaging: #0c7d6c !default;
-$late-text: #222222 !default;
-$info-text: #0e8d7b !default;
 
 /* ********************* */
 /* -- 2. Breakpoints --- */
@@ -94,7 +67,7 @@ $prefix-lg: lg;
 $border-radius: 4px !default;
 $border-width: 1px;
 $border-style: solid;
-$border-color: $themeColor_1;
+$border-color: $grey;
 $border: $border-style $border-width $border-color !default;
 
 /* ********************* */

@@ -91,8 +91,8 @@
 
 @mixin smart-text-color(
   $BG: $background-1,
-  $colorLight: $white,
-  $colorDark: $text-primary,
+  $colorLight: $text-color-light,
+  $colorDark: $text-color-dark,
   $reference: 60
 ) {
   color: smartColor($BG, $colorLight, $colorDark, $reference);
