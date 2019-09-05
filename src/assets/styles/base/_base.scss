@@ -2,6 +2,6 @@ body {
   margin: 0;
   padding: 0;
   background: $background-1;
-  @include smart-text-color($background-1);
+  color: $text-color;
   @include font();
 }

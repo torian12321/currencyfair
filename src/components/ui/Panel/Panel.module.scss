@@ -23,6 +23,7 @@ $panel_gutter_y: 14px;
   // Modifiers
   &__theme_dark {
     background: $panel_secColor;
+    color: $text-color-dark;
   }
   &:first-child {
     border-radius: $border-radius $border-radius 0 0;

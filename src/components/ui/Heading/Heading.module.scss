@@ -4,11 +4,11 @@
   margin: 0.5em 0 1em;
   display: block;
   font-weight: bold;
-  color: $text-color;
+  color: $text-color-dark;
 
   &__1,
   &__2 {
-    color: $text-color-dark;
+    color: $themeColor-1;
   }
   &__1 {
     font-size: 2.4em;

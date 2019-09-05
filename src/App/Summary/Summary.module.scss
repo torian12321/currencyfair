@@ -1,5 +1,22 @@
 @import "assets/styles/abstracts/index.scss";
 
+.propValue {
+  width: 100%;
+  display: block;
+  margin: 0 0 1.2em;
+  &:last-child {
+    margin: 0;
+  }
+
+  &_v {
+    float: right;
+    font-family: $font-bold;
+  }
+
+  &__important &_v {
+    color: $text-color-dark;
+  }
+}
 .footer {
   text-align: center;
   color: $yellow;
