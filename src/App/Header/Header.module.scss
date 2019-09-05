@@ -16,7 +16,7 @@ $header_bg: $blue_darker;
   // Elements
   &_content {
     width: 100%;
-    box-sizing: content-box;
+    box-sizing: border-box;
     max-width: $bp_lg;
     padding: 0 $content-gutter-x;
     margin: auto;
