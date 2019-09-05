@@ -1,0 +1,15 @@
+@import "assets/styles/abstracts/index.scss";
+
+.footer {
+  width: 100%;
+  padding: 12px 0;
+  margin: 16px 0 0;
+  border-top: $border;
+
+  &_links {
+    float: right;
+  }
+  &_linkItem {
+    margin-left: 24px;
+  }
+}

@@ -39,7 +39,7 @@ $aside_w: 400px;
 
     &_main,
     &_aside {
-      display: block;
+      display: inline-table;
       padding: 60px $content-gutter-x $content-gutter-y;
       min-height: 100%;
     }

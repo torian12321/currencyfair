@@ -1,6 +1,6 @@
 import React from "react";
-import { Button, useModal, Link } from "components/ui";
-// import styles from "./App.module.scss";
+import { Heading, Button, useModal, Link } from "components/ui";
+import styles from "./Main.module.scss";
 import Lorem from "./Lorem";
 
 const Main = (props: any) => {
@@ -11,6 +11,7 @@ const Main = (props: any) => {
     <div className={className}>
       <Modal>I have some custom content</Modal>
       <div>
+        <Heading level={4} caption="Let’s set up your transaction! " />
         <Button.Group>
           <Button caption="Next" onClick={showModal} />
           <Button caption="Outline" outline />
@@ -18,6 +19,7 @@ const Main = (props: any) => {
         <Button caption="Disabled" disabled />
         <Button caption="Loading" loading />
         <Link caption="Go somewhere" href="bla bla" />
+        {/* <Lorem />
         <Lorem />
         <Lorem />
         <Lorem />
@@ -25,9 +27,23 @@ const Main = (props: any) => {
         <Lorem />
         <Lorem />
         <Lorem />
-        <Lorem />
-        <Lorem /> <Lorem /> <Lorem /> <Lorem /> <Lorem />
+        <Lorem /> <Lorem /> <Lorem /> <Lorem /> <Lorem /> */}
         <Button caption="Outline" outline />
+        <div className={styles.footer}>
+          Ⓒ2016 CurrencyFair
+          <div className={styles.footer_links}>
+            <Link
+              caption="Help & Support"
+              href="https://www.currencyfair.com"
+              className={styles.footer_linkItem}
+            />
+            <Link
+              caption="Legal Stuff"
+              href="https://www.currencyfair.com"
+              className={styles.footer_linkItem}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
