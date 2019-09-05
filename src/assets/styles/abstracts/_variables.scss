@@ -5,8 +5,8 @@
 * 2. Breakpoints
 * 3. Borders
 * 4. Fonts
-* 5. Others
-* 6. Typography
+* 5. Typography
+* 6. Others
 */
 
 /***********************/
@@ -85,7 +85,18 @@ $font-weight-bold: 700 !default;
 $font-weight-light: 300 !default;
 
 /* ********************* */
-/* ----- 5. Others ----- */
+/* --- 5. Typography --- */
+/* ********************* */
+$font-main: "PostGrotesk-Medium", sans-serif;
+$font-italic: "PostGrotesk-MediumItalic", sans-serif;
+$font-light: "PostGrotesk-Light", sans-serif;
+$font-light-italic: "PostGrotesk-LightItalic", sans-serif;
+$font-bold: "PostGrotesk-Bold", sans-serif;
+$font-bold-italic: "PostGrotesk-BoldItalic", sans-serif;
+$font-body-large: normal font-size $font-main;
+
+/* ********************* */
+/* ----- 6. Others ----- */
 /* ********************* */
 $content-gutter-x: 32px;
 $content-gutter-y: 32px;
@@ -93,14 +104,3 @@ $panel-gutter-x: 20px;
 $panel-gutter-y: 16px;
 $transition-time: 0.3s;
 $transition-timing: ease-out;
-
-/* ********************* */
-/* --- 6. Typography --- */
-/* ********************* */
-$font-main: "Roboto-Regular", sans-serif;
-$font-italic: "Roboto-Italic", sans-serif;
-$font-light: "Roboto-Light", sans-serif;
-$font-light-italic: "Roboto-LightItalic", sans-serif;
-$font-bold: "Roboto-Bold", sans-serif;
-$font-bold-italic: "Roboto-BoldItalic", sans-serif;
-$font-body-large: normal font-size $font-main;
