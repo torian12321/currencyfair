@@ -1,10 +1,13 @@
 import { ReactNode } from "react";
 
 export interface IPanel {
-  children?: ReactNode | ReactNode[];
+  children:
+    | React.ReactElement<IPanelSection>[]
+    | React.ReactElement<IPanelSection>;
   className?: string;
 }
 export interface IPanelSection {
   children?: any;
   className?: string;
+  theme?: "dark";
 }
