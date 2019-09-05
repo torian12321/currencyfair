@@ -1,10 +1,7 @@
 @import "assets/styles/abstracts/index.scss";
 
-$bg_main: $background-2;
-$bg_sec: $background-1;
-// $bg_main: #ccc;
-// $bg_sec: #666;
-
+$bg_main: $background-1;
+$bg_sec: $background-2;
 $aside_w: 400px;
 
 .App {
@@ -21,18 +18,19 @@ $aside_w: 400px;
 }
 .body {
   max-width: $bp_lg;
-  padding: 0 $content-gutter-x;
+  padding: 0;
   margin: auto;
 
+  &_main,
+  &_aside {
+    padding: $content-gutter-y $content-gutter-x;
+  }
   &_main {
     background: $bg_main;
+    border-bottom: 2px $border-style $border-color;
   }
   &_aside {
     background: $bg_sec;
-
-    // @include bp-md {
-    //   border-left: 2px solid black;
-    // }
   }
 
   @include bp-md {
@@ -41,16 +39,21 @@ $aside_w: 400px;
 
     &_main,
     &_aside {
-      display: inline-flex;
-      padding: 48px;
+      display: inline-table;
+      padding: 60px $content-gutter-x $content-gutter-y;
       min-height: 100%;
     }
     &_main {
       width: calc(100% - 400px);
+      padding-right: 48px;
     }
     &_aside {
       width: $aside_w;
+      padding-left: 48px;
       border-left: 2px $border-style $border-color;
+
+      // position: sticky;
+      // top: 80px;
     }
   }
 }
