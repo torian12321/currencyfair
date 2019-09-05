@@ -6,7 +6,7 @@ https://css-tricks.com/custom-scrollbars-in-webkit/
 
 @mixin scrollbars(
   $color_main: transparentize($black, 0.6),
-  $color_sec: $background-2,
+  $color_sec: $white-dark,
   $size: 12px
 ) {
   ::-webkit-scrollbar {
