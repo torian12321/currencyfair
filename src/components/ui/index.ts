@@ -1,3 +1,4 @@
+export { CurrencyBadget } from "./CurrencyBadget";
 export { Heading } from "./Heading";
 export { Link } from "./Link";
 export { Modal, useModal } from "./Modal";

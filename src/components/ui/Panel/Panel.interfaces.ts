@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 export interface IPanel {
   children:
     | React.ReactElement<IPanelSection>[]

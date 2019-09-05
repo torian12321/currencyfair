@@ -1,0 +1,32 @@
+@import "assets/styles/abstracts/index.scss";
+
+// Vars
+$panel_mainColor: $white;
+$panel_secColor: $white-dark;
+$panel_gutter_x: 10px;
+$panel_gutter_y: 14px;
+
+// Block
+.badget {
+  position: relative;
+  background: $background-2;
+  padding: 0.6em;
+  display: inline-flex;
+  border: $border;
+  border-radius: 100% 0% 0% 100% / 49% 0% 100% 51%;
+  // 100% 0% 0% 100% / 49% 0% 100% 51%
+  text-transform: uppercase;
+  // color: black;
+}
+
+.text {
+  margin: 0.6em 0 0 0.8em;
+}
+.icon {
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  background: $themeColor-1-dark;
+  @include background-cover();
+  background-image: url("./img/euro.svg");
+}
