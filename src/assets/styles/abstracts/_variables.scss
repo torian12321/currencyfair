@@ -19,35 +19,22 @@ $black: #000 !default;
 $grey: #ededed;
 $grey-dark: #e0e0e0;
 $yellow: #ffd179;
-
-// Primary
-$main-color-dark: #1565c0 !default;
-$main-color-darker: #0d47a1 !default;
-$main-color-light: #d2e3ff !default;
-$main-color-lighter: #dbe4f1 !default;
-$main-color-lightest: #eff5fb !default;
-$main-color-darkest: #0a3e67 !default;
-$main-color: #2962ff !default;
-$progress: #7bf264 !default;
-
-// NEWS
-// $whiteDark: #94aaba;
 $blue: #6ec0e6;
 $blue_dark: #2b4d5c;
 $blue_darker: #213945;
 
-$themeColor_1: $blue;
+// Theme Colors
+$themeColor-1: $blue !default;
+$themeColor-1-dark: $blue_darker !default;
+$themeColor-2: $yellow !default;
 
-// Background
 $background-1: $white !default;
 $background-2: $white-dark !default;
 
-// Text
 $text-color: #222b35 !default;
 $text-color-dark: $text-color !default;
 $text-color-light: $white !default;
 $text-color-secondary: #5c6b7a !default;
-$text-success-messaging: #0c7d6c !default;
 
 /* ********************* */
 /* -- 2. Breakpoints --- */

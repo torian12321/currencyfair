@@ -1,7 +1,7 @@
 @import "assets/styles/abstracts/index.scss";
 
-$link_mainColor: $themeColor_1;
-$link_secColor: darken($themeColor_1, 20);
+$link_mainColor: $themeColor-1;
+$link_secColor: darken($themeColor-1-dark, 20);
 
 .link {
   text-decoration: none;
