@@ -39,21 +39,22 @@ $aside_w: 400px;
 
     &_main,
     &_aside {
-      display: inline-table;
+      display: block;
       padding: 60px $content-gutter-x $content-gutter-y;
       min-height: 100%;
     }
     &_main {
       width: calc(100% - 400px);
       padding-right: 48px;
+      border-bottom: 0;
+      border-right: 2px $border-style $border-color;
     }
     &_aside {
       width: $aside_w;
       padding-left: 48px;
-      border-left: 2px $border-style $border-color;
 
-      // position: sticky;
-      // top: 80px;
+      position: sticky;
+      top: 80px;
     }
   }
 }
