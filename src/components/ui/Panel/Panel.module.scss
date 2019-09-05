@@ -1,8 +1,8 @@
 @import "assets/styles/abstracts/index.scss";
 
 // Vars
-$panel_mainColor: $background-1;
-$panel_secColor: $background-2;
+$panel_mainColor: $white;
+$panel_secColor: $white-dark;
 $panel_gutter_x: 10px;
 $panel_gutter_y: 14px;
 
@@ -11,23 +11,24 @@ $panel_gutter_y: 14px;
   position: relative;
   box-sizing: border-box;
   width: 100%;
+}
 
-  &_section {
-    text-align: left;
-    background: $panel_mainColor;
-    border: $border;
-    border-bottom-width: 0;
-    padding: $panel_gutter_y $panel_gutter_x;
+.section {
+  text-align: left;
+  background: $panel_mainColor;
+  border: $border;
+  border-bottom-width: 0;
+  padding: $panel_gutter_y $panel_gutter_x;
 
-    &:nth-child(even) {
-      background: $panel_secColor;
-    }
-    &:first-child {
-      border-radius: $border-radius $border-radius 0 0;
-    }
-    &:last-child {
-      border-radius: 0 0 $border-radius $border-radius;
-      border-bottom-width: $border-width;
-    }
+  // Modifiers
+  &__theme_dark {
+    background: $panel_secColor;
+  }
+  &:first-child {
+    border-radius: $border-radius $border-radius 0 0;
+  }
+  &:last-child {
+    border-radius: 0 0 $border-radius $border-radius;
+    border-bottom-width: $border-width;
   }
 }

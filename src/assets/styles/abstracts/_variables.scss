@@ -13,6 +13,13 @@
 /* ---- 1. Colors ---- */
 /***********************/
 
+$white: #fff;
+$white-dark: #fbfbfb;
+$black: #000 !default;
+$grey: #ededed;
+$grey-dark: #e0e0e0;
+$yellow: #ffd179;
+
 // Primary
 $main-color-dark: #1565c0 !default;
 $main-color-darker: #0d47a1 !default;
@@ -23,24 +30,17 @@ $main-color-darkest: #0a3e67 !default;
 $main-color: #2962ff !default;
 $progress: #7bf264 !default;
 
-// Background
-$background-1: #f6f7f9 !default;
-$background-2: #fafbfc !default;
-$background-3: #e7eaef !default;
-$background-4: #f9fafc !default;
-$grey-darker: #384049 !default;
-$grey: #c8d4dd !default;
-$warning: #ffeb3b !default;
-$white: #ffffff !default;
-$black: #000 !default;
-
 // NEWS
-$whiteDark: #94aaba;
+// $whiteDark: #94aaba;
 $blue: #6ec0e6;
 $blue_dark: #2b4d5c;
 $blue_darker: #213945;
 
 $themeColor_1: $blue;
+
+// Background
+$background-1: $white !default;
+$background-2: $white-dark !default;
 
 // Text
 $text-color: #222b35 !default;
@@ -67,7 +67,7 @@ $prefix-lg: lg;
 $border-radius: 4px !default;
 $border-width: 1px;
 $border-style: solid;
-$border-color: $grey;
+$border-color: $grey-dark;
 $border: $border-style $border-width $border-color !default;
 
 /* ********************* */
