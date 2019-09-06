@@ -7,11 +7,17 @@ const Panel = ({ children, className }: IPanel) => (
   <section className={classNames(styles.panel, className)}>{children}</section>
 );
 
-const PanelSection = ({ children, theme, className }: IPanelSection) => (
+const PanelSection = ({
+  children,
+  theme,
+  className,
+  highlight = false
+}: IPanelSection) => (
   <div
     className={classNames(
       styles.section,
       theme && styles[`section__theme_${theme}`],
+      highlight && styles.section__highlight,
       className
     )}
   >

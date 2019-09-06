@@ -17,8 +17,19 @@ $panel_gutter_y: 18px;
   text-align: left;
   background: $panel_mainColor;
   border: $border;
-  border-bottom-width: 0;
+  // border-bottom-width: 0;
   padding: $panel_gutter_y $panel_gutter_x;
+
+  &:not(:first-child) {
+    border-top-width: 0;
+  }
+  &:first-child {
+    border-radius: $border-radius $border-radius 0 0;
+  }
+  &:last-child {
+    border-radius: 0 0 $border-radius $border-radius;
+    // border-bottom-width: $border-width;
+  }
 
   // Modifiers
   &__theme_dark {
@@ -27,11 +38,11 @@ $panel_gutter_y: 18px;
 
     @include fontBold();
   }
-  &:first-child {
-    border-radius: $border-radius $border-radius 0 0;
-  }
-  &:last-child {
-    border-radius: 0 0 $border-radius $border-radius;
-    border-bottom-width: $border-width;
+
+  &__highlight {
+    background: mix($panel_mainColor, $themeColor-1, 95%);
+    color: $themeColor-1;
+    border-color: $themeColor-1;
+    border-top-width: $border-width;
   }
 }

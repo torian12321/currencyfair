@@ -1,5 +1,12 @@
 import React from "react";
-import { Heading, Button, useModal, Link, CurrencyBadget } from "components/ui";
+import {
+  Panel,
+  Heading,
+  Button,
+  useModal,
+  Link,
+  CurrencyBadget
+} from "components/ui";
 import styles from "./Main.module.scss";
 import Lorem from "./Lorem";
 
@@ -12,8 +19,16 @@ const Main = (props: any) => {
       <Modal>I have some custom content</Modal>
       <div>
         <Heading level={4} caption="Let’s set up your transaction! " />
-        <CurrencyBadget currency="euro" />
-        <CurrencyBadget currency="gbp" />
+
+        <Panel>
+          <Panel.Section highlight>
+            <CurrencyBadget currency="euro" />
+          </Panel.Section>
+          <Panel.Section theme="dark">
+            <CurrencyBadget currency="gbp" />
+          </Panel.Section>
+        </Panel>
+
         <Button.Group>
           <Button caption="Next" onClick={showModal} />
           <Button caption="Outline" outline />

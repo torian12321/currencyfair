@@ -8,4 +8,5 @@ export interface IPanelSection {
   children?: any;
   className?: string;
   theme?: "dark";
+  highlight?: boolean;
 }
