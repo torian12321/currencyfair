@@ -37,4 +37,18 @@
 }
 
 .contentWrapper {
+  &_divider {
+    width: 100%;
+    height: 4px;
+    border-radius: 8px;
+    margin-bottom: 48px;
+
+    // TODO: do this dinamic
+    background: linear-gradient(
+      90deg,
+      $themeColor-1 0%,
+      $themeColor-1 33%,
+      mix($white, $themeColor-1, 70%) 33%
+    );
+  }
 }

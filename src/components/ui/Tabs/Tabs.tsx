@@ -38,6 +38,7 @@ const Tabs = (props: ITabs) => {
         })}
       </div>
       <div className={styles.contentWrapper}>
+        <div className={styles.contentWrapper_divider} />
         {// Display only active TabContent
         children.find((child: any) => child.props.id === activeTab)}
       </div>
@@ -45,11 +46,7 @@ const Tabs = (props: ITabs) => {
   );
 };
 
-const TabItem = (props: ITabItem) => {
-  const { children } = props;
-
-  return <div>{children}</div>;
-};
+const TabItem = ({ children }: ITabItem) => children;
 
 Tabs.TabItem = TabItem;
 
