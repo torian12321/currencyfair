@@ -3,7 +3,6 @@
 // Vars
 $btn_mainColor: $themeColor-1;
 $btn_secColor: $white;
-$btn_disabledColor: grey;
 
 // Block
 .btn {
@@ -56,8 +55,9 @@ $btn_disabledColor: grey;
     &:hover,
     &:active,
     &:focus {
-      background: $btn_disabledColor;
-      border-color: $btn_disabledColor;
+      background: $status-disabled-bg;
+      color: $status-disabled-text;
+      border-color: $status-disabled-text;
     }
   }
 }

@@ -38,6 +38,11 @@ $text-color-darker: #444 !default;
 $text-color-light: $white !default;
 $text-color-secondary: #5c6b7a !default;
 
+// Status Color
+$status-disabled: #e7eaef;
+$status-disabled-bg: $status-disabled;
+$status-disabled-text: #c8d4dd;
+
 /* ********************* */
 /* -- 2. Breakpoints --- */
 /* ********************* */
