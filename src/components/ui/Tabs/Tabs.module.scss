@@ -38,17 +38,22 @@
 
 .contentWrapper {
   &_divider {
+    position: relative;
+    overflow: hidden;
     width: 100%;
     height: 4px;
     border-radius: 8px;
     margin-bottom: 48px;
+    background: mix($white, $themeColor-1, 70%);
 
-    // TODO: do this dinamic
-    background: linear-gradient(
-      90deg,
-      $themeColor-1 0%,
-      $themeColor-1 33%,
-      mix($white, $themeColor-1, 70%) 33%
-    );
+    &_progress {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 0;
+      background: $themeColor-1;
+      @include transition(width);
+    }
   }
 }

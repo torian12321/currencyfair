@@ -37,8 +37,12 @@ const Main = (props: any) => {
             <Button caption="Next" onClick={showModal} />
           </Panel>
         </Tabs.TabItem>
-        <Tabs.TabItem id="recipient" label="Recipient info" disabled />
-        <Tabs.TabItem id="payment" label="Make payment" disabled />
+        <Tabs.TabItem id="recipient" label="Recipient info">
+          Recipient content...
+        </Tabs.TabItem>
+        <Tabs.TabItem id="payment" label="Make payment">
+          Payment content...
+        </Tabs.TabItem>
       </Tabs>
 
       {/* <Lorem />
