@@ -15,7 +15,7 @@ $panel_gutter_y: 14px;
   border: $border;
   border-radius: 5em $border-radius $border-radius 5em;
   text-transform: uppercase;
-  // color: black;
+  color: $text-color-dark;
 }
 
 .text {

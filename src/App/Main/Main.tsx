@@ -26,17 +26,32 @@ const Main = (props: any) => {
             level={6}
             caption="Specify the amount to be sent or received."
           />
-          <Panel>
+          <Panel className={styles.infoPanel}>
             <Panel.Section highlight>
-              <CurrencyBadget currency="euro" />
+              YOU SEND
+              <span className={styles.ammount}>
+                € 2,000.
+                <span className={styles.ammount_cents}>00</span>
+              </span>
+              <CurrencyBadget currency="euro" className={styles.badget} />
             </Panel.Section>
             <Panel.Section theme="dark">
-              <CurrencyBadget currency="gbp" />
+              RECEIVER GETS
+              <span className={styles.ammount}>
+                £ 1,717.
+                <span className={styles.ammount_cents}>49</span>
+              </span>
+              <CurrencyBadget currency="gbp" className={styles.badget} />
             </Panel.Section>
-
-            <Button caption="Next" onClick={showModal} />
           </Panel>
+
+          <Button caption="Next" onClick={showModal} />
         </Tabs.TabItem>
+
+        {
+          // The below tabs shuld be disable,
+          // but they are not to show how tabs work
+        }
         <Tabs.TabItem id="recipient" label="Recipient info">
           Recipient content...
         </Tabs.TabItem>
