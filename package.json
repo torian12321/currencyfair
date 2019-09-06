@@ -1,5 +1,14 @@
 {
   "name": "currencyfair",
+  "description": "React Exercise for currencyfair.",
+  "author": {
+    "name": "Aitor Palomares",
+    "url": "https://torian12321.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/torian12321/currencyfair"
+  },
   "version": "0.1.0",
   "private": true,
   "homepage": "http://torian12321.github.io/currencyfair",
