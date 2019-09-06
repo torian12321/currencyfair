@@ -17,6 +17,9 @@
     color: $text-color-dark;
   }
 }
+.link {
+  @include font();
+}
 .footer {
   text-align: center;
   color: $yellow;

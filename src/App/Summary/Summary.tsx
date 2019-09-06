@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import { Panel } from "components/ui";
+import { Panel, Link } from "components/ui";
 import { IPropValue } from "./Summary.interfaces";
 import styles from "./Summary.module.scss";
 
@@ -24,7 +24,16 @@ const Content = ({ className }: any) => (
         <PropValue prop="You send" val="€2000.00" important />
       </Panel.Section>
       <Panel.Section theme="dark">
-        <PropValue prop="Receiving Details" val="As of right now" />
+        <PropValue
+          prop="Receiving Details"
+          val={
+            <Link
+              className={styles.link}
+              caption="As of right now"
+              href="https://www.currencyfair.com"
+            />
+          }
+        />
       </Panel.Section>
       <Panel.Section>
         <PropValue prop="Rate" val="0.86022" />

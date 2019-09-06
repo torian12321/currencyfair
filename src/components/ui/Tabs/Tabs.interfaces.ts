@@ -9,7 +9,7 @@ export interface ITabs {
 export interface ITabItem {
   id: string;
   label: string;
-  children: any;
+  children?: any;
   className?: string;
   disabled?: boolean;
 }

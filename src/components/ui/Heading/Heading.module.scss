@@ -1,7 +1,7 @@
 @import "assets/styles/abstracts/index.scss";
 
 .heading {
-  margin: 0.5em 0 1em;
+  margin: 0.5em 0;
   display: block;
   font-weight: bold;
   color: $text-color-darker;
@@ -20,12 +20,14 @@
     font-size: 1.8em;
   }
   &__4 {
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
   &__5 {
+    color: $text-color;
     font-size: 1.2em;
   }
   &__6 {
+    color: $text-color;
     font-size: 1em;
   }
 }

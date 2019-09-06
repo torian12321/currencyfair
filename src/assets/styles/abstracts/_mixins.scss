@@ -20,6 +20,11 @@
   font-size: $font-size;
 }
 
+@mixin fontLight() {
+  font-family: $font-light;
+  // font-size: $font-size;
+}
+
 @mixin fontBold() {
   font-family: $font-bold;
   font-size: $font-size;

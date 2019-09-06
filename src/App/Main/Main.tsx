@@ -4,9 +4,10 @@ import {
   Heading,
   Button,
   useModal,
-  Link,
+  Tabs,
   CurrencyBadget
 } from "components/ui";
+import { MainFooter } from "./MainFooter";
 import styles from "./Main.module.scss";
 import Lorem from "./Lorem";
 
@@ -17,26 +18,30 @@ const Main = (props: any) => {
   return (
     <div className={className}>
       <Modal>I have some custom content</Modal>
-      <div>
-        <Heading level={4} caption="Let’s set up your transaction! " />
 
-        <Panel>
-          <Panel.Section highlight>
-            <CurrencyBadget currency="euro" />
-          </Panel.Section>
-          <Panel.Section theme="dark">
-            <CurrencyBadget currency="gbp" />
-          </Panel.Section>
-        </Panel>
+      <Tabs>
+        <Tabs.TabItem id="transaction" label="Transaction info">
+          <Heading level={4} caption="Let’s set up your transaction!" />
+          <Heading
+            level={6}
+            caption="Specify the amount to be sent or received."
+          />
+          <Panel>
+            <Panel.Section highlight>
+              <CurrencyBadget currency="euro" />
+            </Panel.Section>
+            <Panel.Section theme="dark">
+              <CurrencyBadget currency="gbp" />
+            </Panel.Section>
 
-        <Button.Group>
-          <Button caption="Next" onClick={showModal} />
-          <Button caption="Outline" outline />
-        </Button.Group>
-        <Button caption="Disabled" disabled />
-        <Button caption="Loading" loading />
-        <Link caption="Go somewhere" href="bla bla" />
-        {/* <Lorem />
+            <Button caption="Next" onClick={showModal} />
+          </Panel>
+        </Tabs.TabItem>
+        <Tabs.TabItem id="recipient" label="Recipient info" disabled />
+        <Tabs.TabItem id="payment" label="Make payment" disabled />
+      </Tabs>
+
+      {/* <Lorem />
         <Lorem />
         <Lorem />
         <Lorem />
@@ -45,23 +50,7 @@ const Main = (props: any) => {
         <Lorem />
         <Lorem />
         <Lorem /> <Lorem /> <Lorem /> <Lorem /> <Lorem /> */}
-        <Button caption="Outline" outline />
-        <div className={styles.footer}>
-          Ⓒ2016 CurrencyFair
-          <div className={styles.footer_links}>
-            <Link
-              caption="Help & Support"
-              href="https://www.currencyfair.com"
-              className={styles.footer_linkItem}
-            />
-            <Link
-              caption="Legal Stuff"
-              href="https://www.currencyfair.com"
-              className={styles.footer_linkItem}
-            />
-          </div>
-        </div>
-      </div>
+      <MainFooter />
     </div>
   );
 };
