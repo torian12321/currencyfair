@@ -1,4 +1,4 @@
-type TCurrency = "euro" | "gbp";
+export type TCurrency = "euro" | "gbp";
 
 export interface ICurrencyBadget {
   currency: TCurrency;

@@ -1,0 +1,14 @@
+{
+  "euro": {
+    "id": "eur",
+    "symbol": "€",
+    "name": "Euro",
+    "shortName": "EUR"
+  },
+  "gbp": {
+    "id": "gbp",
+    "symbol": "£",
+    "name": "Pound",
+    "shortName": "GBP"
+  }
+}

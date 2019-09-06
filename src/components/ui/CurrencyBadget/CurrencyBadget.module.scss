@@ -13,8 +13,7 @@ $panel_gutter_y: 14px;
   padding: 0.6em;
   display: inline-flex;
   border: $border;
-  border-radius: 100% 0% 0% 100% / 49% 0% 100% 51%;
-  // 100% 0% 0% 100% / 49% 0% 100% 51%
+  border-radius: 5em $border-radius $border-radius 5em;
   text-transform: uppercase;
   // color: black;
 }
@@ -28,5 +27,12 @@ $panel_gutter_y: 14px;
   border-radius: 50%;
   background: $themeColor-1-dark;
   @include background-cover();
-  background-image: url("./img/euro.svg");
+
+  // specific currency images
+  &__eur {
+    background-image: url("./img/euro.svg");
+  }
+  &__gbp {
+    background-image: url("./img/gbp.svg");
+  }
 }

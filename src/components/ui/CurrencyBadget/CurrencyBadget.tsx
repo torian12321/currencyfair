@@ -1,33 +1,25 @@
 import React from "react";
 import classNames from "classnames";
-import { ICurrencyBadget } from "./CurrencyBadget.interfaces";
+import { ICurrencyBadget, TCurrency } from "./CurrencyBadget.interfaces";
 import styles from "./CurrencyBadget.module.scss";
+import currendcyInfo from "./currencyInfo.json";
 
-const currendcyInfo = {
-  euro: {
-    id: "eur",
-    symbol: "€",
-    name: "Euro",
-    shortName: "EUR"
-  },
-  gbp: {
-    id: "gbp",
-    symbol: "£",
-    name: "Po",
-    shortName: "GBP"
-  }
-};
+const getCurrendcyInfo = (c: TCurrency) => currendcyInfo[c] || {};
+
 const CurrencyBadget = (props: ICurrencyBadget) => {
   const { currency, className } = props;
+  const { shortName, id } = getCurrendcyInfo(currency);
 
   return (
-    <div className={className}>
-      <div className={classNames(styles.badget, className)}>
-        <div className={styles.icon} />
-        <span className={classNames(styles.text)}>
-          {currendcyInfo[currency].shortName}
-        </span>
-      </div>
+    <div
+      className={classNames(
+        styles.badget,
+        styles[`badget__lang_${id}`],
+        className
+      )}
+    >
+      <div className={classNames(styles.icon, styles[`icon__${id}`])} />
+      <span className={classNames(styles.text)}>{shortName}</span>
     </div>
   );
 };
