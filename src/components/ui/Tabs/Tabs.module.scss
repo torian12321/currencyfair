@@ -26,13 +26,20 @@
   }
   &__active {
     color: $themeColor-1;
-    &:hover {
-      color: $themeColor-1-dark;
-    }
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    color: $themeColor-1-dark;
   }
 
   &:disabled {
-    cursor: default;
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      cursor: default;
+    }
   }
 }
 

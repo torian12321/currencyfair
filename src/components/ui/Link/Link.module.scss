@@ -6,6 +6,7 @@ $link_secColor: darken($themeColor-1-dark, 20);
 .link {
   text-decoration: none;
   color: $link_mainColor;
+  outline: none;
   cursor: pointer;
   @include transition(color);
 
