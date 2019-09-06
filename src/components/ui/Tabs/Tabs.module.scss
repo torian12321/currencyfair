@@ -1,4 +1,42 @@
 @import "assets/styles/abstracts/index.scss";
 
 .tabs {
+  position: relative;
+  box-sizing: border-box;
+  background: red;
+}
+
+.labels {
+  background: yellow;
+  display: flex;
+  padding: 10px 0;
+}
+
+.labelItem {
+  margin: auto;
+  background: transparent;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  line-height: 1.6;
+  color: $text-color;
+  @include fontBold();
+
+  &_step {
+    display: block;
+  }
+  &__active {
+    color: $themeColor-1;
+    &:hover {
+      color: $themeColor-1-dark;
+    }
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.contentWrapper {
 }

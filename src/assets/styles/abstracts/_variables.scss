@@ -25,7 +25,7 @@ $blue_darker: #31313b !default;
 
 // Theme Colors
 $themeColor-1: $blue !default;
-$themeColor-1-dark: $blue_dark !default;
+$themeColor-1-dark: darken($blue, 10%) !default;
 $themeColor-1-darker: $blue_darker !default;
 $themeColor-2: $yellow !default;
 

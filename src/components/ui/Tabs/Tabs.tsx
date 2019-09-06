@@ -1,72 +1,56 @@
-import React, { Component } from "react";
+import React from "react";
 import classNames from "classnames";
-// import { ITabs } from "./Tabs.interfaces";
+import { Tab } from "./TabsTab";
+import { ITabs, ITabItem } from "./Tabs.interfaces";
 import styles from "./Tabs.module.scss";
 
-const TabsContext = React.createContext({});
+const Tabs = (props: ITabs) => {
+  const { children = [], defaultTab, className } = props;
+  const [activeTab, setactiveTab] = React.useState(defaultTab);
 
-// class MyProvider extends Component {
-//   state = {
-//     name: "Aitor",
-//     age: 31
-//   };
+  React.useEffect(() => {
+    // I not set, render first tab by default
+    if (!activeTab) {
+      setactiveTab(children[0].props.id);
+    }
+  }, []);
 
-//   render() {
-//     return (
-//       <TabsContext.Provider value={{ state: this.state }}>
-//         {this.props.children}
-//       </TabsContext.Provider>
-//     );
-//   }
-// }
-const MyProvider = ({ children }: any) => {
-  const [state, setState] = React.useState({
-    name: "Aitor",
-    age: 31
-  });
-
-  const t = (newTab: string) => {
-    console.log("nn", newTab);
+  const onClickTabItem = (newTab: string) => {
+    setactiveTab(newTab);
   };
 
   return (
-    <TabsContext.Provider
-      value={{
-        state,
-        changeTab: t
-      }}
-    >
-      {children}
-    </TabsContext.Provider>
+    <div className={classNames(styles.tabs, className)}>
+      <div className={styles.labels}>
+        {children.map((child, index) => {
+          const { id, ...rest } = child.props;
+
+          return (
+            <Tab
+              id={id}
+              step={index + 1}
+              isActiveTab={activeTab === id}
+              key={id}
+              onClick={onClickTabItem}
+              {...rest}
+            />
+          );
+        })}
+      </div>
+      <div className={styles.contentWrapper}>
+        {// Display only active TabContent
+        children.find((child: any) => child.props.id === activeTab)}
+      </div>
+    </div>
   );
 };
 
-const Tabs = (props: any) => {
+const TabItem = (props: ITabItem) => {
   const { children } = props;
 
-  return (
-    <MyProvider>
-      <div>{children}</div>
-    </MyProvider>
-  );
+  return <div>{children}</div>;
 };
 
-const TabItem = (props: any) => {
-  const { children } = props;
-
-  return (
-    <TabsContext.Consumer>
-      {(context: any) => (
-        <div>
-          {context.state.name}
-          {children}
-          <button onClick={() => context.changeTab("ABC")}>clickMe</button>
-        </div>
-      )}
-    </TabsContext.Consumer>
-  );
-};
-
-Tabs.Item = TabItem;
+Tabs.TabItem = TabItem;
 
 export { Tabs };
