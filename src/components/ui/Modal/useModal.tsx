@@ -13,8 +13,9 @@ const useModal = () => {
   const showModal = () => setIsVisible(true);
 
   return {
-    Modal: (props: IModal) =>
-      isVisible ? <Modal onDismiss={hiddeModal} {...props} /> : null,
+    Modal: (props: IModal) => (
+      <Modal onDismiss={hiddeModal} isVisible={isVisible} {...props} />
+    ),
     showModal,
     hiddeModal
   };
