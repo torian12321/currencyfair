@@ -39,7 +39,7 @@ const Button = (props: IButton) => {
       aria-label={alt}
       form={form}
       onClick={onClick && onClickHandler}
-      disabled={disabled}
+      disabled={!isClickable}
     >
       {caption}
       {loading && <Spinner className={styles.btn_spinner} />}

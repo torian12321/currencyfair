@@ -35,7 +35,7 @@ const Main = (props: any) => {
         </Button.Group>
         <Button caption="Disabled" disabled />
         <Button caption="Loading" loading />
-        <Link caption="Go somewhere" to="bla bla" />
+        <Link caption="Go somewhere" href="bla bla" />
         {/* <Lorem />
         <Lorem />
         <Lorem />
@@ -51,12 +51,12 @@ const Main = (props: any) => {
           <div className={styles.footer_links}>
             <Link
               caption="Help & Support"
-              to="https://www.currencyfair.com"
+              href="https://www.currencyfair.com"
               className={styles.footer_linkItem}
             />
             <Link
               caption="Legal Stuff"
-              to="https://www.currencyfair.com"
+              href="https://www.currencyfair.com"
               className={styles.footer_linkItem}
             />
           </div>
