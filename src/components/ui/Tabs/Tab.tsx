@@ -15,8 +15,8 @@ const Tab = (props: ITab) => {
     onClick,
     id,
     label = id,
-    className
-    // disabled = false,
+    className,
+    disabled = false
     // isActiveTab = false
   } = props;
 
@@ -25,7 +25,12 @@ const Tab = (props: ITab) => {
   };
 
   return (
-    <button type="button" className={className} onClick={handleOnClick}>
+    <button
+      type="button"
+      className={className}
+      onClick={handleOnClick}
+      disabled={disabled}
+    >
       {label}
     </button>
   );
