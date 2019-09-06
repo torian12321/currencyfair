@@ -58,6 +58,7 @@ $btn_secColor: $white;
       background: $status-disabled-bg;
       color: $status-disabled-text;
       border-color: $status-disabled-text;
+      cursor: not-allowed;
     }
   }
 }
