@@ -8,7 +8,7 @@ const getPosition = () => ({
 });
 
 const useWindowScrollPosition = () => {
-  const [position, setPosition] = useState(getPosition());
+  const [position, setPosition] = useState(getPosition);
 
   const handleScroll = () => {
     setPosition(getPosition());
