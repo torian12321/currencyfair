@@ -19,26 +19,28 @@ const Tabs = (props: ITabs) => {
     setactiveTab(newTab);
   };
 
+  const renderTabs = () =>
+    children.map((child, index) => {
+      const { id, ...rest } = child.props;
+
+      return (
+        <Tab
+          id={id}
+          step={index + 1}
+          isActiveTab={activeTab === id}
+          key={id}
+          onClick={onClickTabItem}
+          {...rest}
+        />
+      );
+    });
+
   return (
     <div className={classNames(styles.tabs, className)}>
-      <div className={styles.labels}>
-        {children.map((child, index) => {
-          const { id, ...rest } = child.props;
-
-          return (
-            <Tab
-              id={id}
-              step={index + 1}
-              isActiveTab={activeTab === id}
-              key={id}
-              onClick={onClickTabItem}
-              {...rest}
-            />
-          );
-        })}
-      </div>
+      <div className={styles.labels}>{renderTabs()}</div>
       <div className={styles.contentWrapper}>
         <div className={styles.contentWrapper_divider} />
+
         {// Display only active TabContent
         children.find((child: any) => child.props.id === activeTab)}
       </div>
