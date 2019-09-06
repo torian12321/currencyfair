@@ -3,8 +3,8 @@
 // Vars
 $panel_mainColor: $white;
 $panel_secColor: $white-dark;
-$panel_gutter_x: 10px;
-$panel_gutter_y: 14px;
+$panel_gutter_x: 16px;
+$panel_gutter_y: 18px;
 
 // Block
 .panel {
@@ -24,6 +24,8 @@ $panel_gutter_y: 14px;
   &__theme_dark {
     background: $panel_secColor;
     color: $text-color-dark;
+
+    @include fontBold();
   }
   &:first-child {
     border-radius: $border-radius $border-radius 0 0;

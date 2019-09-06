@@ -13,26 +13,28 @@
 /* ---- 1. Colors ---- */
 /***********************/
 
-$white: #fff;
-$white-dark: #fbfbfb;
+$white: #fff !default;
+$white-dark: #fbfbfb !default;
 $black: #000 !default;
-$grey: #ededed;
-$grey-dark: #e0e0e0;
-$yellow: #ffd179;
-$blue: #6ec0e6;
-$blue_dark: #2b4d5c;
-$blue_darker: #213945;
+$grey: #ededed !default;
+$grey-dark: #e0e0e0 !default;
+$yellow: #ffd179 !default;
+$blue: #6ec0e6 !default;
+$blue_dark: #2b4d5c !default;
+$blue_darker: #31313b !default;
 
 // Theme Colors
 $themeColor-1: $blue !default;
-$themeColor-1-dark: $blue_darker !default;
+$themeColor-1-dark: $blue_dark !default;
+$themeColor-1-darker: $blue_darker !default;
 $themeColor-2: $yellow !default;
 
 $background-1: $white !default;
 $background-2: $white-dark !default;
 
 $text-color: #999 !default;
-$text-color-dark: #444 !default;
+$text-color-dark: #747474 !default;
+$text-color-darker: #444 !default;
 $text-color-light: $white !default;
 $text-color-secondary: #5c6b7a !default;
 
