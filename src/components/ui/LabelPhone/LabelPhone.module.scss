@@ -1,0 +1,26 @@
+@import "assets/styles/abstracts/index.scss";
+
+$labelPhone_mainColor: $white-dark;
+$labelPhone_secColor: $grey;
+
+.container {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  border: $border;
+  border-radius: $border-radius;
+  padding: 0;
+  overflow: hidden;
+
+  background: $labelPhone_mainColor;
+}
+
+.prefix,
+.number {
+  display: inline-block;
+  height: 100%;
+  padding: 0.4em 0.4em 0.1em;
+}
+.prefix {
+  background: $labelPhone_secColor;
+}

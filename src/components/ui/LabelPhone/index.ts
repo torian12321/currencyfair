@@ -1,0 +1,1 @@
+export { LabelPhone } from "./LabelPhone";
