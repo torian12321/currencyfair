@@ -4,7 +4,7 @@ import { ILink } from "./Link.interfaces";
 import styles from "./Link.module.scss";
 
 const Link = (props: ILink) => {
-  const { caption, href, className, target = "_blank", rel } = props;
+  const { children, caption, href, className, target = "_blank", rel } = props;
 
   return (
     <a
@@ -13,7 +13,7 @@ const Link = (props: ILink) => {
       rel={rel}
       className={classNames(styles.link, className)}
     >
-      {caption}
+      {children || caption}
     </a>
   );
 };

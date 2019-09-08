@@ -7,6 +7,7 @@ import {
   Tabs,
   CurrencyBadget
 } from "components/ui";
+import { ModalVerification } from "../ModalVerification";
 import { MainFooter } from "./MainFooter";
 import styles from "./Main.module.scss";
 import Lorem from "./Lorem";
@@ -18,6 +19,7 @@ const Main = (props: any) => {
   return (
     <div className={className}>
       <Modal>I have some custom content</Modal>
+      <ModalVerification />
 
       <Tabs>
         <Tabs.TabItem id="transaction" label="Transaction info">

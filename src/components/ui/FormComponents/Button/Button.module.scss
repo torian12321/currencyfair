@@ -55,9 +55,7 @@ $btn_secColor: $white;
     &:hover,
     &:active,
     &:focus {
-      background: $status-disabled-bg;
-      color: $status-disabled-text;
-      border-color: $status-disabled-text;
+      opacity: 0.4;
       cursor: not-allowed;
     }
   }

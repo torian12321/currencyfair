@@ -1,0 +1,24 @@
+@import "assets/styles/abstracts/index.scss";
+
+.modal {
+}
+
+.header {
+  &_icon {
+    color: $grey-dark;
+    margin-right: 0.6em;
+    font-size: 1.6em;
+  }
+  &_title {
+    display: inline-block;
+  }
+  &_subtitle {
+    max-width: 80%;
+    display: block;
+  }
+}
+
+.footer_link {
+  float: right;
+  margin-top: 1em;
+}

@@ -1,5 +1,6 @@
 export interface ILink {
-  caption: string;
+  children?: any;
+  caption?: string;
   href: string;
   target?: "_blank" | "_self" | "_parent" | "_top";
   rel?: string;

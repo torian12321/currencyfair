@@ -31,7 +31,9 @@ const Content = ({ className }: any) => (
               className={styles.link}
               caption="As of right now"
               href="https://www.currencyfair.com"
-            />
+            >
+              As of right now <i className="fas fa-question-circle" />
+            </Link>
           }
         />
       </Panel.Section>

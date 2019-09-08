@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
+import classNames from "classnames";
 import { useKeyPress } from "components/hooks";
 import { IModal } from "./Modal.interfaces";
 import styles from "./Modal.module.scss";
@@ -7,7 +8,12 @@ import styles from "./Modal.module.scss";
 const KEY_ESC = 27;
 
 const Modal = (props: IModal) => {
-  const { children, isVisible = false, onDismiss = () => {} } = props;
+  const {
+    children,
+    className,
+    isVisible = false,
+    onDismiss = () => {}
+  } = props;
   const escIsPressed = useKeyPress(KEY_ESC);
   const { body: _dBody } = document;
 
@@ -41,16 +47,27 @@ const Modal = (props: IModal) => {
 
   return isVisible
     ? ReactDOM.createPortal(
-        <>
+        <div className={classNames(styles.wrapper, className)}>
           <div className={styles.modal_BG} />
-          <div className={styles.modal}>
-            <div onClick={closeModal}>close me</div>
-            {children}
-          </div>
-        </>,
+          <div className={styles.modal}>{children}</div>
+        </div>,
         _dBody
       )
     : null;
 };
+
+const Header = ({ children, className }: any) => (
+  <div className={classNames(styles.header, className)}>{children}</div>
+);
+const Body = ({ children, className }: any) => (
+  <div className={classNames(styles.body, className)}>{children}</div>
+);
+const Footer = ({ children, className }: any) => (
+  <div className={classNames(styles.footer, className)}>{children}</div>
+);
+
+Modal.Header = Header;
+Modal.Body = Body;
+Modal.Footer = Footer;
 
 export { Modal };

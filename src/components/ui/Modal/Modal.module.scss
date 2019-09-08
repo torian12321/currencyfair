@@ -3,14 +3,18 @@
 .body_hasModal {
   overflow: hidden;
 }
+.wrapper {
+  z-index: 100;
+}
 .modal {
   &_BG {
     position: fixed;
+    z-index: 110;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background: black;
+    background: $black;
     opacity: 0;
 
     animation: fadeI_BG 0.5s ease-in 1;
@@ -25,15 +29,16 @@
     }
   }
 
-  position: absolute;
+  position: fixed;
+  z-index: 120;
   top: 50px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   width: 80vw;
-  max-width: 800px;
+  max-width: 640px;
   min-width: 200px;
   opacity: 0;
-  background: $white;
+  // background: $white;
 
   animation: fadeIn 0.5s ease-in 1;
   animation-fill-mode: forwards;
@@ -48,4 +53,26 @@
       margin-top: 0;
     }
   }
+}
+
+.header,
+.body,
+.footer {
+  padding: 24px;
+  border: 0 $border-style $border-color;
+}
+
+.header {
+  border-radius: $border-radius $border-radius 0 0;
+  background: $background-1;
+  border-bottom-width: $border-width;
+}
+.footer {
+  border-radius: 0 0 $border-radius $border-radius;
+  background: $background-1;
+  border-top-width: $border-width;
+}
+
+.body {
+  background: $background-2;
 }
