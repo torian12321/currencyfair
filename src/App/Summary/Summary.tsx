@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import { Panel, Link } from "components/ui";
+import { Panel, Icon, Link } from "components/ui";
 import { IPropValue } from "./Summary.interfaces";
 import styles from "./Summary.module.scss";
 
@@ -32,7 +32,7 @@ const Content = ({ className }: any) => (
               caption="As of right now"
               href="https://www.currencyfair.com"
             >
-              As of right now <i className="fas fa-question-circle" />
+              As of right now <Icon name="question-circle" />
             </Link>
           }
         />
