@@ -2,11 +2,17 @@ import React from "react";
 import { Modal, Icon, Heading, Button, Link, LabelPhone } from "components/ui";
 import styles from "./ModalVerification.module.scss";
 
+const FormOption = ({ caption, iconName, className }: any) => (
+  <span className={styles.formOptions_option}>
+    <Icon name={iconName} className={styles.formOptions_icon} /> {caption}
+  </span>
+);
+
 const ModalVerification = () => (
   <Modal className={styles.modal} isVisible={true}>
     <Modal.Header>
       <span>
-        <Icon name="lock" />
+        <Icon name="lock" className={styles.header_icon} />
         <Heading
           className={styles.header_title}
           level={5}
@@ -23,14 +29,8 @@ const ModalVerification = () => (
       <LabelPhone number="872251177" />
       <div>fields</div>
       <div className={styles.formOptions}>
-        <span className={styles.formOptions_option}>
-          <Icon name="redo" />
-          Receive a new code
-        </span>
-        <span className={styles.formOptions_option}>
-          <Icon name="phone" />
-          Receive code via call instead
-        </span>
+        <FormOption iconName="redo" caption="Receive a new code" />
+        <FormOption iconName="phone" caption="Receive code via call instead" />
       </div>
     </Modal.Body>
     <Modal.Footer>

@@ -18,6 +18,15 @@
   }
 }
 
+.formOptions {
+  &_option:nth-child(2) {
+    float: right;
+  }
+  &_icon {
+    margin-right: 4px;
+    color: $themeColor-1;
+  }
+}
 .footer_link {
   float: right;
   margin-top: 1em;
