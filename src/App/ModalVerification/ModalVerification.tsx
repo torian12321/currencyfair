@@ -9,8 +9,7 @@ import {
   LabelPhone,
   useForm
 } from "components/ui";
-// import { FieldsCode } from "./ModalVerificationForm";
-import { F_01, F_02, F_03, F_04, F_05, F_06 } from "./constants";
+import { fieldNames } from "./constants";
 import styles from "./ModalVerification.module.scss";
 
 const FormOption = ({ caption, iconName }: any) => (
@@ -27,12 +26,7 @@ const ModalVerification = (props: any) => {
   useEffect(() => {
     setIsValid(
       // Check than all fields had a value
-      !!values[F_01] &&
-        !!values[F_02] &&
-        !!values[F_03] &&
-        !!values[F_04] &&
-        !!values[F_05] &&
-        !!values[F_06]
+      !fieldNames.find(fn => !values[fn])
     );
   }, [values]);
 
@@ -53,22 +47,26 @@ const ModalVerification = (props: any) => {
         </span>
       </Modal.Header>
       <Modal.Body>
-        <strong>Enter the code sent via SMS to</strong>
-        <LabelPhone number="872251177" />
-        <div>
-          <Input name={F_01} maxLength={1} />
-          <Input name={F_02} maxLength={1} />
-          <Input name={F_03} maxLength={1} />
-          <Input name={F_04} maxLength={1} />
-          <Input name={F_05} maxLength={1} />
-          <Input name={F_06} maxLength={1} />
-        </div>
-        <div className={styles.formOptions}>
-          <FormOption iconName="redo" caption="Receive a new code" />
-          <FormOption
-            iconName="phone"
-            caption="Receive code via call instead"
-          />
+        <div className={styles.content}>
+          <strong>Enter the code sent via SMS to</strong>
+          <LabelPhone number="872251177" className={styles.content_phone} />
+          <div className={styles.code}>
+            {fieldNames.map(fn => (
+              <Input
+                name={fn}
+                maxLength={1}
+                key={fn}
+                className={styles.code_field}
+              />
+            ))}
+          </div>
+          <div className={styles.formOptions}>
+            <FormOption iconName="redo" caption="Receive a new code" />
+            <FormOption
+              iconName="phone"
+              caption="Receive code via call instead"
+            />
+          </div>
         </div>
       </Modal.Body>
       <Modal.Footer>

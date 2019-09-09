@@ -31,3 +31,30 @@
   float: right;
   margin-top: 1em;
 }
+
+.content {
+  max-width: 400px;
+  margin: 24px auto;
+
+  &_phone {
+    top: 8px;
+    margin-left: 12px;
+  }
+}
+.code {
+  padding: 24px 0;
+  display: flex;
+
+  &_field {
+    text-align: center;
+    width: 4em;
+    margin: auto;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
