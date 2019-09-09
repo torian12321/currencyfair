@@ -1,11 +1,8 @@
 import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import classNames from "classnames";
-import { useKeyPress } from "components/hooks";
 import { IModal } from "./Modal.interfaces";
 import styles from "./Modal.module.scss";
-
-const KEY_ESC = 27;
 
 const Modal = (props: IModal) => {
   const {
@@ -14,7 +11,6 @@ const Modal = (props: IModal) => {
     isVisible = false,
     onDismiss = () => {}
   } = props;
-  const escIsPressed = useKeyPress(KEY_ESC);
   const { body: _dBody } = document;
 
   useEffect(() => {
@@ -24,26 +20,16 @@ const Modal = (props: IModal) => {
     return () => {
       _dBody.classList.remove(styles.body_hasModal);
     };
-  }, []);
+  }, [_dBody]);
 
   useEffect(() => {
     if (isVisible) {
       _dBody.classList.add(styles.body_hasModal);
     } else {
       _dBody.classList.remove(styles.body_hasModal);
+      onDismiss();
     }
-  }, [isVisible]);
-
-  useEffect(() => {
-    // Remove the Modal from the screen when ESC is pressed
-    if (isVisible && escIsPressed) {
-      closeModal();
-    }
-  }, [escIsPressed]);
-
-  const closeModal = () => {
-    onDismiss();
-  };
+  }, [isVisible, onDismiss, _dBody]);
 
   return isVisible
     ? ReactDOM.createPortal(

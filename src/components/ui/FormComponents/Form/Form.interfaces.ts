@@ -1,5 +1,6 @@
 export interface IForm {
   children: any;
   className?: string;
-  onSubmit?: () => any;
+  initialValues?: any;
+  onSubmit?: any; //() => any;
 }

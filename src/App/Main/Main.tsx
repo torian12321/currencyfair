@@ -14,12 +14,11 @@ import Lorem from "./Lorem";
 
 const Main = (props: any) => {
   const { className } = props;
-  const { Modal, showModal } = useModal();
+  const { showModal, hiddeModal, isVisible } = useModal();
 
   return (
     <div className={className}>
-      <Modal>I have some custom content</Modal>
-      <ModalVerification />
+      <ModalVerification closeModal={hiddeModal} isVisible={isVisible} />
 
       <Tabs>
         <Tabs.TabItem id="transaction" label="Transaction info">
