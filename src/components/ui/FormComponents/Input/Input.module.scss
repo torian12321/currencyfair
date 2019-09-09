@@ -13,11 +13,12 @@ $input_secColor: $white;
   box-sizing: border-box;
   border: $border;
   border-radius: $border-radius;
-  @include transition(border);
+  @include transition(all);
 
   &:focus,
   &:active {
     border-color: $themeColor-1;
+    background: mix($white, $themeColor-1, 90%);
   }
   &:hover {
     border-color: $themeColor-1-dark;
