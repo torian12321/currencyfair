@@ -1,0 +1,25 @@
+@import "assets/styles/abstracts/index.scss";
+
+// Vars
+$input_mainColor: $themeColor-1;
+$input_secColor: $white;
+
+// Block
+.input {
+  padding: 1em;
+  width: 100%;
+  outline: none;
+  background: $white;
+  box-sizing: border-box;
+  border: $border;
+  border-radius: $border-radius;
+  @include transition(border);
+
+  &:focus,
+  &:active {
+    border-color: $themeColor-1;
+  }
+  &:hover {
+    border-color: $themeColor-1-dark;
+  }
+}
