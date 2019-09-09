@@ -10,7 +10,6 @@ import {
 import { ModalVerification } from "../ModalVerification";
 import { MainFooter } from "./MainFooter";
 import styles from "./Main.module.scss";
-import Lorem from "./Lorem";
 
 const Main = (props: any) => {
   const { className } = props;
@@ -60,16 +59,6 @@ const Main = (props: any) => {
           Payment content...
         </Tabs.TabItem>
       </Tabs>
-
-      {/* <Lorem />
-        <Lorem />
-        <Lorem />
-        <Lorem />
-        <Lorem />
-        <Lorem />
-        <Lorem />
-        <Lorem />
-        <Lorem /> <Lorem /> <Lorem /> <Lorem /> <Lorem /> */}
       <MainFooter />
     </div>
   );
