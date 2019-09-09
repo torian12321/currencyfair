@@ -1,1 +1,1 @@
-export { ModalVerification } from "./ModalVerification";
+export { ModalVerification } from "./ModalVerification.container";
