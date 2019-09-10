@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "148899c1719bdf330e67cffc8e5a3db8",
+    "revision": "305f26a62cffcc6c40ec9d234312f83c",
     "url": "/currencyfair/index.html"
   },
   {
-    "revision": "df62050621b81b85c765",
-    "url": "/currencyfair/static/css/main.a0439dae.chunk.css"
+    "revision": "274bee653ef99f4d1be5",
+    "url": "/currencyfair/static/css/main.f1bd3328.chunk.css"
   },
   {
     "revision": "92f57b01b3a44888bc83",
     "url": "/currencyfair/static/js/2.b029203c.chunk.js"
   },
   {
-    "revision": "df62050621b81b85c765",
-    "url": "/currencyfair/static/js/main.27a0a33e.chunk.js"
+    "revision": "274bee653ef99f4d1be5",
+    "url": "/currencyfair/static/js/main.1c87d2ec.chunk.js"
   },
   {
     "revision": "e5e1729f938d8928a208",
@@ -44,15 +44,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/currencyfair/static/media/PostGrotesk-MediumItalic.04550632.ttf"
   },
   {
-    "revision": "7b7e6ac84c851947f60593a4f0df0acf",
-    "url": "/currencyfair/static/media/cf_logo.7b7e6ac8.svg"
+    "revision": "1d56699ec567971257644ee05ede3b83",
+    "url": "/currencyfair/static/media/cf_logo.1d56699e.svg"
   },
   {
     "revision": "7b4534d284b8ca4889f4c4d8b56d1f9c",
     "url": "/currencyfair/static/media/euro.7b4534d2.svg"
   },
   {
-    "revision": "2e9c71c7514c4036f0122b1bdc202c17",
-    "url": "/currencyfair/static/media/gbp.2e9c71c7.svg"
+    "revision": "497e7cd177bb13ad2b86d31103f0426a",
+    "url": "/currencyfair/static/media/gbp.497e7cd1.svg"
   }
 ]);
